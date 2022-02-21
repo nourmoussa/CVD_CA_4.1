@@ -1,0 +1,62 @@
+version: '2.0'
+nlu:
+  - intent: woman-path-intent-0
+    examples: |
+      - Woman
+      - Women
+      - female
+  - intent: pregnant-path-intent-1
+    examples: |
+      - '[Yes]{"entity": "affirm"}'
+      - Yeah
+      - I am
+  - intent: background-path-intent-1
+    examples: |
+      - 'I am [middle-eastern]{"entity": "racial-id"} '
+      - british
+  - intent: man-path-intent-0
+    examples: |
+      - Man
+      - Men
+  - intent: stop-assessment-path-intent-0
+    examples: |
+      - '[No]{"entity": "deny"}'
+      - '[No]{"entity": "deny"} thanks'
+  - intent: continue-assessment-path-intent-0
+    examples: |
+      - '[Yes]{"entity": "affirm"}'
+      - '[Sure]{"entity": "affirm"}'
+  - intent: greet
+    examples: |
+      - hi
+      - hello
+      - hey
+  - intent: affirm
+    examples: |
+      - perfect
+      - great
+      - '[Sure]{"entity": "affirm"}'
+  - intent: age-user
+    examples: |
+      - '[32]{"entity": "age"}'
+      - '40'
+  - intent: deny
+    examples: |
+      - '[No]{"entity": "deny"}'
+      - 'I am [No]{"entity": "deny"}t'
+  - intent: bmi-weight-user
+    examples: |
+      - '[[6]{"entity": "hours-sleep"}0]{"entity": "weight"} kg'
+      - 70 kg
+  - intent: bmi-height-user
+    examples: |
+      - '[1[6]{"entity": "hours-sleep"}5]{"entity": "height"} cm'
+      - '1[[6]{"entity": "hours-sleep"}0]{"entity": "weight"} cm'
+  - intent: thank
+    examples: |
+      - '[That''s good to k[No]{"entity": "deny"}w]{"entity": "affirm"}, thank you! '
+      - '[Ok thank you!]{"entity": "thank"} '
+  - intent: count-sleep-hours
+    examples: |
+      - '[6]{"entity": "hours-sleep"}'
+      - '[10]{"entity": "hours-sleep"}'

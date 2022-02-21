@@ -1,0 +1,3197 @@
+version: '2.0'
+stories:
+  - story: Welcome Path
+    steps:
+      - intent: greet
+      - action: utter_welcome-greet
+      - action: utter_disclaimer
+      - intent: affirm
+      - action: utter_age
+      - intent: age-user
+        entities:
+          - age: '32'
+      - action: utter_gender
+      - action: utter_untitled-path-intent-20
+  - story: Welcome Path + Untitled Path + Woman Path + Untitled Path + Pregnant Path + BMI Path + Background Path + Smoking Path + Smoking  + Physical activity Path + Diet Path + Risk Prediction Path + Untitled Path + Stop assessment Path
+    steps:
+      - intent: greet
+      - action: utter_welcome-greet
+      - action: utter_disclaimer
+      - intent: affirm
+      - action: utter_age
+      - intent: age-user
+        entities:
+          - age: '32'
+      - action: utter_gender
+      - action: utter_gender-intent
+      - intent: woman-path-intent-0
+      - action: utter_woman-path-intent-1
+      - action: utter_pregnant
+      - action: utter_pregnant-intent
+      - intent: pregnant-path-intent-1
+        entities:
+          - affirm: 'Yes'
+      - action: utter_pregnant-path-intent-0
+      - action: utter_bmi-intro
+      - action: utter_weight-question
+      - intent: bmi-weight-user
+        entities:
+          - weight: '60'
+      - action: utter_height-question
+      - intent: bmi-height-user
+        entities:
+          - height: '165'
+      - action: utter_background-path-intent-0
+      - intent: background-path-intent-1
+        entities:
+          - racial-id: middle-eastern
+      - action: utter_heredity
+      - action: utter_heredity-affirm-deny
+      - intent: smoking-path-intent-0
+      - action: utter_smoking-path-intent-0
+      - action: utter_smoking-affirm-deny
+      - intent: smoking-initial
+      - action: utter_smoking-initial
+      - action: utter_yes-smoking
+      - intent: smoking-inform
+      - action: utter_smoking-inform
+      - action: utter_pe-start
+      - action: utter_pe-options
+      - intent: pe-inform
+      - action: utter_pe-inform
+      - action: utter_fruits/vegetables
+      - action: utter_count-fruits/vegetables
+      - intent: diet-inform-1
+      - action: utter_diet-inform-1
+      - action: utter_saturated-animal-fat
+      - action: utter_count-saturated-animal-fat
+      - intent: coffee
+      - action: utter_coffee
+      - action: utter_count-coffee
+      - intent: coffee-inform
+      - action: utter_coffee-inform
+      - action: utter_water
+      - action: utter_water-count
+      - intent: water-hardness
+      - action: utter_water-hardness
+      - action: utter_location-physical
+      - action: utter_location-list
+      - intent: location-inform
+      - action: utter_location-inform
+      - action: utter_calculated-risk
+      - action: utter_potential-reduction-of-risk
+      - action: utter_solutions-to-reduce-risks
+      - intent: thank
+        entities:
+          - affirm: 'Yes'
+          - thank: Ok thank you!
+      - action: utter_welcome-after-thankyou
+      - action: utter_continue-or-later
+      - action: utter_continue-assessment--intent
+      - intent: stop-assessment-path-intent-0
+        entities:
+          - deny: 'No'
+      - action: utter_stop-assessment-path-intent-1
+  - story: Welcome Path + Untitled Path + Woman Path + Untitled Path + Pregnant Path + BMI Path + Background Path + Smoking Path + Smoking  + Not Smoking + Physical activity Path + Diet Path + Risk Prediction Path + Untitled Path + Stop assessment Path
+    steps:
+      - intent: greet
+      - action: utter_welcome-greet
+      - action: utter_disclaimer
+      - intent: affirm
+      - action: utter_age
+      - intent: age-user
+        entities:
+          - age: '32'
+      - action: utter_gender
+      - action: utter_gender-intent
+      - intent: woman-path-intent-0
+      - action: utter_woman-path-intent-1
+      - action: utter_pregnant
+      - action: utter_pregnant-intent
+      - intent: pregnant-path-intent-1
+        entities:
+          - affirm: 'Yes'
+      - action: utter_pregnant-path-intent-0
+      - action: utter_bmi-intro
+      - action: utter_weight-question
+      - intent: bmi-weight-user
+        entities:
+          - weight: '60'
+      - action: utter_height-question
+      - intent: bmi-height-user
+        entities:
+          - height: '165'
+      - action: utter_background-path-intent-0
+      - intent: background-path-intent-1
+        entities:
+          - racial-id: middle-eastern
+      - action: utter_heredity
+      - action: utter_heredity-affirm-deny
+      - intent: smoking-path-intent-0
+      - action: utter_smoking-path-intent-0
+      - action: utter_smoking-affirm-deny
+      - intent: smoking-initial
+      - action: utter_smoking-initial
+      - action: utter_yes-smoking
+      - intent: not-smoking
+      - action: utter_not-smoking
+      - action: utter_pe-start
+      - action: utter_pe-options
+      - intent: pe-inform
+      - action: utter_pe-inform
+      - action: utter_fruits/vegetables
+      - action: utter_count-fruits/vegetables
+      - intent: diet-inform-1
+      - action: utter_diet-inform-1
+      - action: utter_saturated-animal-fat
+      - action: utter_count-saturated-animal-fat
+      - intent: coffee
+      - action: utter_coffee
+      - action: utter_count-coffee
+      - intent: coffee-inform
+      - action: utter_coffee-inform
+      - action: utter_water
+      - action: utter_water-count
+      - intent: water-hardness
+      - action: utter_water-hardness
+      - action: utter_location-physical
+      - action: utter_location-list
+      - intent: location-inform
+      - action: utter_location-inform
+      - action: utter_calculated-risk
+      - action: utter_potential-reduction-of-risk
+      - action: utter_solutions-to-reduce-risks
+      - intent: thank
+        entities:
+          - affirm: 'Yes'
+          - thank: Ok thank you!
+      - action: utter_welcome-after-thankyou
+      - action: utter_continue-or-later
+      - action: utter_continue-assessment--intent
+      - intent: stop-assessment-path-intent-0
+        entities:
+          - deny: 'No'
+      - action: utter_stop-assessment-path-intent-1
+  - story: Welcome Path + Untitled Path + Woman Path + Untitled Path + Pregnant Path + BMI Path + Background Path + Smoking Path + Not Smoking + Physical activity Path + Diet Path + Risk Prediction Path + Untitled Path + Stop assessment Path
+    steps:
+      - intent: greet
+      - action: utter_welcome-greet
+      - action: utter_disclaimer
+      - intent: affirm
+      - action: utter_age
+      - intent: age-user
+        entities:
+          - age: '32'
+      - action: utter_gender
+      - action: utter_gender-intent
+      - intent: woman-path-intent-0
+      - action: utter_woman-path-intent-1
+      - action: utter_pregnant
+      - action: utter_pregnant-intent
+      - intent: pregnant-path-intent-1
+        entities:
+          - affirm: 'Yes'
+      - action: utter_pregnant-path-intent-0
+      - action: utter_bmi-intro
+      - action: utter_weight-question
+      - intent: bmi-weight-user
+        entities:
+          - weight: '60'
+      - action: utter_height-question
+      - intent: bmi-height-user
+        entities:
+          - height: '165'
+      - action: utter_background-path-intent-0
+      - intent: background-path-intent-1
+        entities:
+          - racial-id: middle-eastern
+      - action: utter_heredity
+      - action: utter_heredity-affirm-deny
+      - intent: smoking-path-intent-0
+      - action: utter_smoking-path-intent-0
+      - action: utter_smoking-affirm-deny
+      - intent: not-smoking
+      - action: utter_not-smoking
+      - action: utter_pe-start
+      - action: utter_pe-options
+      - intent: pe-inform
+      - action: utter_pe-inform
+      - action: utter_fruits/vegetables
+      - action: utter_count-fruits/vegetables
+      - intent: diet-inform-1
+      - action: utter_diet-inform-1
+      - action: utter_saturated-animal-fat
+      - action: utter_count-saturated-animal-fat
+      - intent: coffee
+      - action: utter_coffee
+      - action: utter_count-coffee
+      - intent: coffee-inform
+      - action: utter_coffee-inform
+      - action: utter_water
+      - action: utter_water-count
+      - intent: water-hardness
+      - action: utter_water-hardness
+      - action: utter_location-physical
+      - action: utter_location-list
+      - intent: location-inform
+      - action: utter_location-inform
+      - action: utter_calculated-risk
+      - action: utter_potential-reduction-of-risk
+      - action: utter_solutions-to-reduce-risks
+      - intent: thank
+        entities:
+          - affirm: 'Yes'
+          - thank: Ok thank you!
+      - action: utter_welcome-after-thankyou
+      - action: utter_continue-or-later
+      - action: utter_continue-assessment--intent
+      - intent: stop-assessment-path-intent-0
+        entities:
+          - deny: 'No'
+      - action: utter_stop-assessment-path-intent-1
+  - story: Welcome Path + Untitled Path + Woman Path + Untitled Path + Not Pregnant Path + BMI Path + Background Path + Smoking Path + Smoking  + Physical activity Path + Diet Path + Risk Prediction Path + Untitled Path + Stop assessment Path
+    steps:
+      - intent: greet
+      - action: utter_welcome-greet
+      - action: utter_disclaimer
+      - intent: affirm
+      - action: utter_age
+      - intent: age-user
+        entities:
+          - age: '32'
+      - action: utter_gender
+      - action: utter_gender-intent
+      - intent: woman-path-intent-0
+      - action: utter_woman-path-intent-1
+      - action: utter_pregnant
+      - action: utter_pregnant-intent
+      - intent: deny
+        entities:
+          - deny: 'No'
+      - action: utter_bmi-intro
+      - action: utter_weight-question
+      - intent: bmi-weight-user
+        entities:
+          - weight: '60'
+      - action: utter_height-question
+      - intent: bmi-height-user
+        entities:
+          - height: '165'
+      - action: utter_background-path-intent-0
+      - intent: background-path-intent-1
+        entities:
+          - racial-id: middle-eastern
+      - action: utter_heredity
+      - action: utter_heredity-affirm-deny
+      - intent: smoking-path-intent-0
+      - action: utter_smoking-path-intent-0
+      - action: utter_smoking-affirm-deny
+      - intent: smoking-initial
+      - action: utter_smoking-initial
+      - action: utter_yes-smoking
+      - intent: smoking-inform
+      - action: utter_smoking-inform
+      - action: utter_pe-start
+      - action: utter_pe-options
+      - intent: pe-inform
+      - action: utter_pe-inform
+      - action: utter_fruits/vegetables
+      - action: utter_count-fruits/vegetables
+      - intent: diet-inform-1
+      - action: utter_diet-inform-1
+      - action: utter_saturated-animal-fat
+      - action: utter_count-saturated-animal-fat
+      - intent: coffee
+      - action: utter_coffee
+      - action: utter_count-coffee
+      - intent: coffee-inform
+      - action: utter_coffee-inform
+      - action: utter_water
+      - action: utter_water-count
+      - intent: water-hardness
+      - action: utter_water-hardness
+      - action: utter_location-physical
+      - action: utter_location-list
+      - intent: location-inform
+      - action: utter_location-inform
+      - action: utter_calculated-risk
+      - action: utter_potential-reduction-of-risk
+      - action: utter_solutions-to-reduce-risks
+      - intent: thank
+        entities:
+          - affirm: 'Yes'
+          - thank: Ok thank you!
+      - action: utter_welcome-after-thankyou
+      - action: utter_continue-or-later
+      - action: utter_continue-assessment--intent
+      - intent: stop-assessment-path-intent-0
+        entities:
+          - deny: 'No'
+      - action: utter_stop-assessment-path-intent-1
+  - story: Welcome Path + Untitled Path + Woman Path + Untitled Path + Not Pregnant Path + BMI Path + Background Path + Smoking Path + Smoking  + Not Smoking + Physical activity Path + Diet Path + Risk Prediction Path + Untitled Path + Stop assessment Path
+    steps:
+      - intent: greet
+      - action: utter_welcome-greet
+      - action: utter_disclaimer
+      - intent: affirm
+      - action: utter_age
+      - intent: age-user
+        entities:
+          - age: '32'
+      - action: utter_gender
+      - action: utter_gender-intent
+      - intent: woman-path-intent-0
+      - action: utter_woman-path-intent-1
+      - action: utter_pregnant
+      - action: utter_pregnant-intent
+      - intent: deny
+        entities:
+          - deny: 'No'
+      - action: utter_bmi-intro
+      - action: utter_weight-question
+      - intent: bmi-weight-user
+        entities:
+          - weight: '60'
+      - action: utter_height-question
+      - intent: bmi-height-user
+        entities:
+          - height: '165'
+      - action: utter_background-path-intent-0
+      - intent: background-path-intent-1
+        entities:
+          - racial-id: middle-eastern
+      - action: utter_heredity
+      - action: utter_heredity-affirm-deny
+      - intent: smoking-path-intent-0
+      - action: utter_smoking-path-intent-0
+      - action: utter_smoking-affirm-deny
+      - intent: smoking-initial
+      - action: utter_smoking-initial
+      - action: utter_yes-smoking
+      - intent: not-smoking
+      - action: utter_not-smoking
+      - action: utter_pe-start
+      - action: utter_pe-options
+      - intent: pe-inform
+      - action: utter_pe-inform
+      - action: utter_fruits/vegetables
+      - action: utter_count-fruits/vegetables
+      - intent: diet-inform-1
+      - action: utter_diet-inform-1
+      - action: utter_saturated-animal-fat
+      - action: utter_count-saturated-animal-fat
+      - intent: coffee
+      - action: utter_coffee
+      - action: utter_count-coffee
+      - intent: coffee-inform
+      - action: utter_coffee-inform
+      - action: utter_water
+      - action: utter_water-count
+      - intent: water-hardness
+      - action: utter_water-hardness
+      - action: utter_location-physical
+      - action: utter_location-list
+      - intent: location-inform
+      - action: utter_location-inform
+      - action: utter_calculated-risk
+      - action: utter_potential-reduction-of-risk
+      - action: utter_solutions-to-reduce-risks
+      - intent: thank
+        entities:
+          - affirm: 'Yes'
+          - thank: Ok thank you!
+      - action: utter_welcome-after-thankyou
+      - action: utter_continue-or-later
+      - action: utter_continue-assessment--intent
+      - intent: stop-assessment-path-intent-0
+        entities:
+          - deny: 'No'
+      - action: utter_stop-assessment-path-intent-1
+  - story: Welcome Path + Untitled Path + Woman Path + Untitled Path + Not Pregnant Path + BMI Path + Background Path + Smoking Path + Not Smoking + Physical activity Path + Diet Path + Risk Prediction Path + Untitled Path + Stop assessment Path
+    steps:
+      - intent: greet
+      - action: utter_welcome-greet
+      - action: utter_disclaimer
+      - intent: affirm
+      - action: utter_age
+      - intent: age-user
+        entities:
+          - age: '32'
+      - action: utter_gender
+      - action: utter_gender-intent
+      - intent: woman-path-intent-0
+      - action: utter_woman-path-intent-1
+      - action: utter_pregnant
+      - action: utter_pregnant-intent
+      - intent: deny
+        entities:
+          - deny: 'No'
+      - action: utter_bmi-intro
+      - action: utter_weight-question
+      - intent: bmi-weight-user
+        entities:
+          - weight: '60'
+      - action: utter_height-question
+      - intent: bmi-height-user
+        entities:
+          - height: '165'
+      - action: utter_background-path-intent-0
+      - intent: background-path-intent-1
+        entities:
+          - racial-id: middle-eastern
+      - action: utter_heredity
+      - action: utter_heredity-affirm-deny
+      - intent: smoking-path-intent-0
+      - action: utter_smoking-path-intent-0
+      - action: utter_smoking-affirm-deny
+      - intent: not-smoking
+      - action: utter_not-smoking
+      - action: utter_pe-start
+      - action: utter_pe-options
+      - intent: pe-inform
+      - action: utter_pe-inform
+      - action: utter_fruits/vegetables
+      - action: utter_count-fruits/vegetables
+      - intent: diet-inform-1
+      - action: utter_diet-inform-1
+      - action: utter_saturated-animal-fat
+      - action: utter_count-saturated-animal-fat
+      - intent: coffee
+      - action: utter_coffee
+      - action: utter_count-coffee
+      - intent: coffee-inform
+      - action: utter_coffee-inform
+      - action: utter_water
+      - action: utter_water-count
+      - intent: water-hardness
+      - action: utter_water-hardness
+      - action: utter_location-physical
+      - action: utter_location-list
+      - intent: location-inform
+      - action: utter_location-inform
+      - action: utter_calculated-risk
+      - action: utter_potential-reduction-of-risk
+      - action: utter_solutions-to-reduce-risks
+      - intent: thank
+        entities:
+          - affirm: 'Yes'
+          - thank: Ok thank you!
+      - action: utter_welcome-after-thankyou
+      - action: utter_continue-or-later
+      - action: utter_continue-assessment--intent
+      - intent: stop-assessment-path-intent-0
+        entities:
+          - deny: 'No'
+      - action: utter_stop-assessment-path-intent-1
+  - story: Welcome Path + Untitled Path + Man Path + BMI Path + Background Path + Smoking Path + Smoking  + Physical activity Path + Diet Path + Risk Prediction Path + Untitled Path + Stop assessment Path
+    steps:
+      - intent: greet
+      - action: utter_welcome-greet
+      - action: utter_disclaimer
+      - intent: affirm
+      - action: utter_age
+      - intent: age-user
+        entities:
+          - age: '32'
+      - action: utter_gender
+      - action: utter_gender-intent
+      - intent: man-path-intent-0
+      - action: utter_bmi-intro
+      - action: utter_weight-question
+      - intent: bmi-weight-user
+        entities:
+          - weight: '60'
+      - action: utter_height-question
+      - intent: bmi-height-user
+        entities:
+          - height: '165'
+      - action: utter_background-path-intent-0
+      - intent: background-path-intent-1
+        entities:
+          - racial-id: middle-eastern
+      - action: utter_heredity
+      - action: utter_heredity-affirm-deny
+      - intent: smoking-path-intent-0
+      - action: utter_smoking-path-intent-0
+      - action: utter_smoking-affirm-deny
+      - intent: smoking-initial
+      - action: utter_smoking-initial
+      - action: utter_yes-smoking
+      - intent: smoking-inform
+      - action: utter_smoking-inform
+      - action: utter_pe-start
+      - action: utter_pe-options
+      - intent: pe-inform
+      - action: utter_pe-inform
+      - action: utter_fruits/vegetables
+      - action: utter_count-fruits/vegetables
+      - intent: diet-inform-1
+      - action: utter_diet-inform-1
+      - action: utter_saturated-animal-fat
+      - action: utter_count-saturated-animal-fat
+      - intent: coffee
+      - action: utter_coffee
+      - action: utter_count-coffee
+      - intent: coffee-inform
+      - action: utter_coffee-inform
+      - action: utter_water
+      - action: utter_water-count
+      - intent: water-hardness
+      - action: utter_water-hardness
+      - action: utter_location-physical
+      - action: utter_location-list
+      - intent: location-inform
+      - action: utter_location-inform
+      - action: utter_calculated-risk
+      - action: utter_potential-reduction-of-risk
+      - action: utter_solutions-to-reduce-risks
+      - intent: thank
+        entities:
+          - affirm: 'Yes'
+          - thank: Ok thank you!
+      - action: utter_welcome-after-thankyou
+      - action: utter_continue-or-later
+      - action: utter_continue-assessment--intent
+      - intent: stop-assessment-path-intent-0
+        entities:
+          - deny: 'No'
+      - action: utter_stop-assessment-path-intent-1
+  - story: Welcome Path + Untitled Path + Man Path + BMI Path + Background Path + Smoking Path + Smoking  + Not Smoking + Physical activity Path + Diet Path + Risk Prediction Path + Untitled Path + Stop assessment Path
+    steps:
+      - intent: greet
+      - action: utter_welcome-greet
+      - action: utter_disclaimer
+      - intent: affirm
+      - action: utter_age
+      - intent: age-user
+        entities:
+          - age: '32'
+      - action: utter_gender
+      - action: utter_gender-intent
+      - intent: man-path-intent-0
+      - action: utter_bmi-intro
+      - action: utter_weight-question
+      - intent: bmi-weight-user
+        entities:
+          - weight: '60'
+      - action: utter_height-question
+      - intent: bmi-height-user
+        entities:
+          - height: '165'
+      - action: utter_background-path-intent-0
+      - intent: background-path-intent-1
+        entities:
+          - racial-id: middle-eastern
+      - action: utter_heredity
+      - action: utter_heredity-affirm-deny
+      - intent: smoking-path-intent-0
+      - action: utter_smoking-path-intent-0
+      - action: utter_smoking-affirm-deny
+      - intent: smoking-initial
+      - action: utter_smoking-initial
+      - action: utter_yes-smoking
+      - intent: not-smoking
+      - action: utter_not-smoking
+      - action: utter_pe-start
+      - action: utter_pe-options
+      - intent: pe-inform
+      - action: utter_pe-inform
+      - action: utter_fruits/vegetables
+      - action: utter_count-fruits/vegetables
+      - intent: diet-inform-1
+      - action: utter_diet-inform-1
+      - action: utter_saturated-animal-fat
+      - action: utter_count-saturated-animal-fat
+      - intent: coffee
+      - action: utter_coffee
+      - action: utter_count-coffee
+      - intent: coffee-inform
+      - action: utter_coffee-inform
+      - action: utter_water
+      - action: utter_water-count
+      - intent: water-hardness
+      - action: utter_water-hardness
+      - action: utter_location-physical
+      - action: utter_location-list
+      - intent: location-inform
+      - action: utter_location-inform
+      - action: utter_calculated-risk
+      - action: utter_potential-reduction-of-risk
+      - action: utter_solutions-to-reduce-risks
+      - intent: thank
+        entities:
+          - affirm: 'Yes'
+          - thank: Ok thank you!
+      - action: utter_welcome-after-thankyou
+      - action: utter_continue-or-later
+      - action: utter_continue-assessment--intent
+      - intent: stop-assessment-path-intent-0
+        entities:
+          - deny: 'No'
+      - action: utter_stop-assessment-path-intent-1
+  - story: Welcome Path + Untitled Path + Man Path + BMI Path + Background Path + Smoking Path + Not Smoking + Physical activity Path + Diet Path + Risk Prediction Path + Untitled Path + Stop assessment Path
+    steps:
+      - intent: greet
+      - action: utter_welcome-greet
+      - action: utter_disclaimer
+      - intent: affirm
+      - action: utter_age
+      - intent: age-user
+        entities:
+          - age: '32'
+      - action: utter_gender
+      - action: utter_gender-intent
+      - intent: man-path-intent-0
+      - action: utter_bmi-intro
+      - action: utter_weight-question
+      - intent: bmi-weight-user
+        entities:
+          - weight: '60'
+      - action: utter_height-question
+      - intent: bmi-height-user
+        entities:
+          - height: '165'
+      - action: utter_background-path-intent-0
+      - intent: background-path-intent-1
+        entities:
+          - racial-id: middle-eastern
+      - action: utter_heredity
+      - action: utter_heredity-affirm-deny
+      - intent: smoking-path-intent-0
+      - action: utter_smoking-path-intent-0
+      - action: utter_smoking-affirm-deny
+      - intent: not-smoking
+      - action: utter_not-smoking
+      - action: utter_pe-start
+      - action: utter_pe-options
+      - intent: pe-inform
+      - action: utter_pe-inform
+      - action: utter_fruits/vegetables
+      - action: utter_count-fruits/vegetables
+      - intent: diet-inform-1
+      - action: utter_diet-inform-1
+      - action: utter_saturated-animal-fat
+      - action: utter_count-saturated-animal-fat
+      - intent: coffee
+      - action: utter_coffee
+      - action: utter_count-coffee
+      - intent: coffee-inform
+      - action: utter_coffee-inform
+      - action: utter_water
+      - action: utter_water-count
+      - intent: water-hardness
+      - action: utter_water-hardness
+      - action: utter_location-physical
+      - action: utter_location-list
+      - intent: location-inform
+      - action: utter_location-inform
+      - action: utter_calculated-risk
+      - action: utter_potential-reduction-of-risk
+      - action: utter_solutions-to-reduce-risks
+      - intent: thank
+        entities:
+          - affirm: 'Yes'
+          - thank: Ok thank you!
+      - action: utter_welcome-after-thankyou
+      - action: utter_continue-or-later
+      - action: utter_continue-assessment--intent
+      - intent: stop-assessment-path-intent-0
+        entities:
+          - deny: 'No'
+      - action: utter_stop-assessment-path-intent-1
+  - story: Welcome Path + Untitled Path + Woman Path + Untitled Path + Pregnant Path + BMI Path + Background Path + Smoking Path + Smoking  + Physical activity Path + Diet Path + Risk Prediction Path + Untitled Path + Continue assessment Path + Social Path + Sleep Path
+    steps:
+      - intent: greet
+      - action: utter_welcome-greet
+      - action: utter_disclaimer
+      - intent: affirm
+      - action: utter_age
+      - intent: age-user
+        entities:
+          - age: '32'
+      - action: utter_gender
+      - action: utter_gender-intent
+      - intent: woman-path-intent-0
+      - action: utter_woman-path-intent-1
+      - action: utter_pregnant
+      - action: utter_pregnant-intent
+      - intent: pregnant-path-intent-1
+        entities:
+          - affirm: 'Yes'
+      - action: utter_pregnant-path-intent-0
+      - action: utter_bmi-intro
+      - action: utter_weight-question
+      - intent: bmi-weight-user
+        entities:
+          - weight: '60'
+      - action: utter_height-question
+      - intent: bmi-height-user
+        entities:
+          - height: '165'
+      - action: utter_background-path-intent-0
+      - intent: background-path-intent-1
+        entities:
+          - racial-id: middle-eastern
+      - action: utter_heredity
+      - action: utter_heredity-affirm-deny
+      - intent: smoking-path-intent-0
+      - action: utter_smoking-path-intent-0
+      - action: utter_smoking-affirm-deny
+      - intent: smoking-initial
+      - action: utter_smoking-initial
+      - action: utter_yes-smoking
+      - intent: smoking-inform
+      - action: utter_smoking-inform
+      - action: utter_pe-start
+      - action: utter_pe-options
+      - intent: pe-inform
+      - action: utter_pe-inform
+      - action: utter_fruits/vegetables
+      - action: utter_count-fruits/vegetables
+      - intent: diet-inform-1
+      - action: utter_diet-inform-1
+      - action: utter_saturated-animal-fat
+      - action: utter_count-saturated-animal-fat
+      - intent: coffee
+      - action: utter_coffee
+      - action: utter_count-coffee
+      - intent: coffee-inform
+      - action: utter_coffee-inform
+      - action: utter_water
+      - action: utter_water-count
+      - intent: water-hardness
+      - action: utter_water-hardness
+      - action: utter_location-physical
+      - action: utter_location-list
+      - intent: location-inform
+      - action: utter_location-inform
+      - action: utter_calculated-risk
+      - action: utter_potential-reduction-of-risk
+      - action: utter_solutions-to-reduce-risks
+      - intent: thank
+        entities:
+          - affirm: 'Yes'
+          - thank: Ok thank you!
+      - action: utter_welcome-after-thankyou
+      - action: utter_continue-or-later
+      - action: utter_continue-assessment--intent
+      - intent: continue-assessment-path-intent-0
+        entities:
+          - affirm: 'Yes'
+      - action: utter_going-out
+      - action: utter_yes-no-social-going-out
+      - intent: people-seen-question
+      - action: utter_people-seen-question
+      - action: utter_count-people-seen
+      - intent: social-inform
+      - action: utter_social-inform
+      - action: utter_sleep-hours-question
+      - intent: count-sleep-hours
+        entities:
+          - hours-sleep: '6'
+      - action: utter_sleep-inform
+  - story: Welcome Path + Untitled Path + Woman Path + Untitled Path + Pregnant Path + BMI Path + Background Path + Smoking Path + Smoking  + Not Smoking + Physical activity Path + Diet Path + Risk Prediction Path + Untitled Path + Continue assessment Path + Social Path + Sleep Path
+    steps:
+      - intent: greet
+      - action: utter_welcome-greet
+      - action: utter_disclaimer
+      - intent: affirm
+      - action: utter_age
+      - intent: age-user
+        entities:
+          - age: '32'
+      - action: utter_gender
+      - action: utter_gender-intent
+      - intent: woman-path-intent-0
+      - action: utter_woman-path-intent-1
+      - action: utter_pregnant
+      - action: utter_pregnant-intent
+      - intent: pregnant-path-intent-1
+        entities:
+          - affirm: 'Yes'
+      - action: utter_pregnant-path-intent-0
+      - action: utter_bmi-intro
+      - action: utter_weight-question
+      - intent: bmi-weight-user
+        entities:
+          - weight: '60'
+      - action: utter_height-question
+      - intent: bmi-height-user
+        entities:
+          - height: '165'
+      - action: utter_background-path-intent-0
+      - intent: background-path-intent-1
+        entities:
+          - racial-id: middle-eastern
+      - action: utter_heredity
+      - action: utter_heredity-affirm-deny
+      - intent: smoking-path-intent-0
+      - action: utter_smoking-path-intent-0
+      - action: utter_smoking-affirm-deny
+      - intent: smoking-initial
+      - action: utter_smoking-initial
+      - action: utter_yes-smoking
+      - intent: not-smoking
+      - action: utter_not-smoking
+      - action: utter_pe-start
+      - action: utter_pe-options
+      - intent: pe-inform
+      - action: utter_pe-inform
+      - action: utter_fruits/vegetables
+      - action: utter_count-fruits/vegetables
+      - intent: diet-inform-1
+      - action: utter_diet-inform-1
+      - action: utter_saturated-animal-fat
+      - action: utter_count-saturated-animal-fat
+      - intent: coffee
+      - action: utter_coffee
+      - action: utter_count-coffee
+      - intent: coffee-inform
+      - action: utter_coffee-inform
+      - action: utter_water
+      - action: utter_water-count
+      - intent: water-hardness
+      - action: utter_water-hardness
+      - action: utter_location-physical
+      - action: utter_location-list
+      - intent: location-inform
+      - action: utter_location-inform
+      - action: utter_calculated-risk
+      - action: utter_potential-reduction-of-risk
+      - action: utter_solutions-to-reduce-risks
+      - intent: thank
+        entities:
+          - affirm: 'Yes'
+          - thank: Ok thank you!
+      - action: utter_welcome-after-thankyou
+      - action: utter_continue-or-later
+      - action: utter_continue-assessment--intent
+      - intent: continue-assessment-path-intent-0
+        entities:
+          - affirm: 'Yes'
+      - action: utter_going-out
+      - action: utter_yes-no-social-going-out
+      - intent: people-seen-question
+      - action: utter_people-seen-question
+      - action: utter_count-people-seen
+      - intent: social-inform
+      - action: utter_social-inform
+      - action: utter_sleep-hours-question
+      - intent: count-sleep-hours
+        entities:
+          - hours-sleep: '6'
+      - action: utter_sleep-inform
+  - story: Welcome Path + Untitled Path + Woman Path + Untitled Path + Pregnant Path + BMI Path + Background Path + Smoking Path + Not Smoking + Physical activity Path + Diet Path + Risk Prediction Path + Untitled Path + Continue assessment Path + Social Path + Sleep Path
+    steps:
+      - intent: greet
+      - action: utter_welcome-greet
+      - action: utter_disclaimer
+      - intent: affirm
+      - action: utter_age
+      - intent: age-user
+        entities:
+          - age: '32'
+      - action: utter_gender
+      - action: utter_gender-intent
+      - intent: woman-path-intent-0
+      - action: utter_woman-path-intent-1
+      - action: utter_pregnant
+      - action: utter_pregnant-intent
+      - intent: pregnant-path-intent-1
+        entities:
+          - affirm: 'Yes'
+      - action: utter_pregnant-path-intent-0
+      - action: utter_bmi-intro
+      - action: utter_weight-question
+      - intent: bmi-weight-user
+        entities:
+          - weight: '60'
+      - action: utter_height-question
+      - intent: bmi-height-user
+        entities:
+          - height: '165'
+      - action: utter_background-path-intent-0
+      - intent: background-path-intent-1
+        entities:
+          - racial-id: middle-eastern
+      - action: utter_heredity
+      - action: utter_heredity-affirm-deny
+      - intent: smoking-path-intent-0
+      - action: utter_smoking-path-intent-0
+      - action: utter_smoking-affirm-deny
+      - intent: not-smoking
+      - action: utter_not-smoking
+      - action: utter_pe-start
+      - action: utter_pe-options
+      - intent: pe-inform
+      - action: utter_pe-inform
+      - action: utter_fruits/vegetables
+      - action: utter_count-fruits/vegetables
+      - intent: diet-inform-1
+      - action: utter_diet-inform-1
+      - action: utter_saturated-animal-fat
+      - action: utter_count-saturated-animal-fat
+      - intent: coffee
+      - action: utter_coffee
+      - action: utter_count-coffee
+      - intent: coffee-inform
+      - action: utter_coffee-inform
+      - action: utter_water
+      - action: utter_water-count
+      - intent: water-hardness
+      - action: utter_water-hardness
+      - action: utter_location-physical
+      - action: utter_location-list
+      - intent: location-inform
+      - action: utter_location-inform
+      - action: utter_calculated-risk
+      - action: utter_potential-reduction-of-risk
+      - action: utter_solutions-to-reduce-risks
+      - intent: thank
+        entities:
+          - affirm: 'Yes'
+          - thank: Ok thank you!
+      - action: utter_welcome-after-thankyou
+      - action: utter_continue-or-later
+      - action: utter_continue-assessment--intent
+      - intent: continue-assessment-path-intent-0
+        entities:
+          - affirm: 'Yes'
+      - action: utter_going-out
+      - action: utter_yes-no-social-going-out
+      - intent: people-seen-question
+      - action: utter_people-seen-question
+      - action: utter_count-people-seen
+      - intent: social-inform
+      - action: utter_social-inform
+      - action: utter_sleep-hours-question
+      - intent: count-sleep-hours
+        entities:
+          - hours-sleep: '6'
+      - action: utter_sleep-inform
+  - story: Welcome Path + Untitled Path + Woman Path + Untitled Path + Not Pregnant Path + BMI Path + Background Path + Smoking Path + Smoking  + Physical activity Path + Diet Path + Risk Prediction Path + Untitled Path + Continue assessment Path + Social Path + Sleep Path
+    steps:
+      - intent: greet
+      - action: utter_welcome-greet
+      - action: utter_disclaimer
+      - intent: affirm
+      - action: utter_age
+      - intent: age-user
+        entities:
+          - age: '32'
+      - action: utter_gender
+      - action: utter_gender-intent
+      - intent: woman-path-intent-0
+      - action: utter_woman-path-intent-1
+      - action: utter_pregnant
+      - action: utter_pregnant-intent
+      - intent: deny
+        entities:
+          - deny: 'No'
+      - action: utter_bmi-intro
+      - action: utter_weight-question
+      - intent: bmi-weight-user
+        entities:
+          - weight: '60'
+      - action: utter_height-question
+      - intent: bmi-height-user
+        entities:
+          - height: '165'
+      - action: utter_background-path-intent-0
+      - intent: background-path-intent-1
+        entities:
+          - racial-id: middle-eastern
+      - action: utter_heredity
+      - action: utter_heredity-affirm-deny
+      - intent: smoking-path-intent-0
+      - action: utter_smoking-path-intent-0
+      - action: utter_smoking-affirm-deny
+      - intent: smoking-initial
+      - action: utter_smoking-initial
+      - action: utter_yes-smoking
+      - intent: smoking-inform
+      - action: utter_smoking-inform
+      - action: utter_pe-start
+      - action: utter_pe-options
+      - intent: pe-inform
+      - action: utter_pe-inform
+      - action: utter_fruits/vegetables
+      - action: utter_count-fruits/vegetables
+      - intent: diet-inform-1
+      - action: utter_diet-inform-1
+      - action: utter_saturated-animal-fat
+      - action: utter_count-saturated-animal-fat
+      - intent: coffee
+      - action: utter_coffee
+      - action: utter_count-coffee
+      - intent: coffee-inform
+      - action: utter_coffee-inform
+      - action: utter_water
+      - action: utter_water-count
+      - intent: water-hardness
+      - action: utter_water-hardness
+      - action: utter_location-physical
+      - action: utter_location-list
+      - intent: location-inform
+      - action: utter_location-inform
+      - action: utter_calculated-risk
+      - action: utter_potential-reduction-of-risk
+      - action: utter_solutions-to-reduce-risks
+      - intent: thank
+        entities:
+          - affirm: 'Yes'
+          - thank: Ok thank you!
+      - action: utter_welcome-after-thankyou
+      - action: utter_continue-or-later
+      - action: utter_continue-assessment--intent
+      - intent: continue-assessment-path-intent-0
+        entities:
+          - affirm: 'Yes'
+      - action: utter_going-out
+      - action: utter_yes-no-social-going-out
+      - intent: people-seen-question
+      - action: utter_people-seen-question
+      - action: utter_count-people-seen
+      - intent: social-inform
+      - action: utter_social-inform
+      - action: utter_sleep-hours-question
+      - intent: count-sleep-hours
+        entities:
+          - hours-sleep: '6'
+      - action: utter_sleep-inform
+  - story: Welcome Path + Untitled Path + Woman Path + Untitled Path + Not Pregnant Path + BMI Path + Background Path + Smoking Path + Smoking  + Not Smoking + Physical activity Path + Diet Path + Risk Prediction Path + Untitled Path + Continue assessment Path + Social Path + Sleep Path
+    steps:
+      - intent: greet
+      - action: utter_welcome-greet
+      - action: utter_disclaimer
+      - intent: affirm
+      - action: utter_age
+      - intent: age-user
+        entities:
+          - age: '32'
+      - action: utter_gender
+      - action: utter_gender-intent
+      - intent: woman-path-intent-0
+      - action: utter_woman-path-intent-1
+      - action: utter_pregnant
+      - action: utter_pregnant-intent
+      - intent: deny
+        entities:
+          - deny: 'No'
+      - action: utter_bmi-intro
+      - action: utter_weight-question
+      - intent: bmi-weight-user
+        entities:
+          - weight: '60'
+      - action: utter_height-question
+      - intent: bmi-height-user
+        entities:
+          - height: '165'
+      - action: utter_background-path-intent-0
+      - intent: background-path-intent-1
+        entities:
+          - racial-id: middle-eastern
+      - action: utter_heredity
+      - action: utter_heredity-affirm-deny
+      - intent: smoking-path-intent-0
+      - action: utter_smoking-path-intent-0
+      - action: utter_smoking-affirm-deny
+      - intent: smoking-initial
+      - action: utter_smoking-initial
+      - action: utter_yes-smoking
+      - intent: not-smoking
+      - action: utter_not-smoking
+      - action: utter_pe-start
+      - action: utter_pe-options
+      - intent: pe-inform
+      - action: utter_pe-inform
+      - action: utter_fruits/vegetables
+      - action: utter_count-fruits/vegetables
+      - intent: diet-inform-1
+      - action: utter_diet-inform-1
+      - action: utter_saturated-animal-fat
+      - action: utter_count-saturated-animal-fat
+      - intent: coffee
+      - action: utter_coffee
+      - action: utter_count-coffee
+      - intent: coffee-inform
+      - action: utter_coffee-inform
+      - action: utter_water
+      - action: utter_water-count
+      - intent: water-hardness
+      - action: utter_water-hardness
+      - action: utter_location-physical
+      - action: utter_location-list
+      - intent: location-inform
+      - action: utter_location-inform
+      - action: utter_calculated-risk
+      - action: utter_potential-reduction-of-risk
+      - action: utter_solutions-to-reduce-risks
+      - intent: thank
+        entities:
+          - affirm: 'Yes'
+          - thank: Ok thank you!
+      - action: utter_welcome-after-thankyou
+      - action: utter_continue-or-later
+      - action: utter_continue-assessment--intent
+      - intent: continue-assessment-path-intent-0
+        entities:
+          - affirm: 'Yes'
+      - action: utter_going-out
+      - action: utter_yes-no-social-going-out
+      - intent: people-seen-question
+      - action: utter_people-seen-question
+      - action: utter_count-people-seen
+      - intent: social-inform
+      - action: utter_social-inform
+      - action: utter_sleep-hours-question
+      - intent: count-sleep-hours
+        entities:
+          - hours-sleep: '6'
+      - action: utter_sleep-inform
+  - story: Welcome Path + Untitled Path + Woman Path + Untitled Path + Not Pregnant Path + BMI Path + Background Path + Smoking Path + Not Smoking + Physical activity Path + Diet Path + Risk Prediction Path + Untitled Path + Continue assessment Path + Social Path + Sleep Path
+    steps:
+      - intent: greet
+      - action: utter_welcome-greet
+      - action: utter_disclaimer
+      - intent: affirm
+      - action: utter_age
+      - intent: age-user
+        entities:
+          - age: '32'
+      - action: utter_gender
+      - action: utter_gender-intent
+      - intent: woman-path-intent-0
+      - action: utter_woman-path-intent-1
+      - action: utter_pregnant
+      - action: utter_pregnant-intent
+      - intent: deny
+        entities:
+          - deny: 'No'
+      - action: utter_bmi-intro
+      - action: utter_weight-question
+      - intent: bmi-weight-user
+        entities:
+          - weight: '60'
+      - action: utter_height-question
+      - intent: bmi-height-user
+        entities:
+          - height: '165'
+      - action: utter_background-path-intent-0
+      - intent: background-path-intent-1
+        entities:
+          - racial-id: middle-eastern
+      - action: utter_heredity
+      - action: utter_heredity-affirm-deny
+      - intent: smoking-path-intent-0
+      - action: utter_smoking-path-intent-0
+      - action: utter_smoking-affirm-deny
+      - intent: not-smoking
+      - action: utter_not-smoking
+      - action: utter_pe-start
+      - action: utter_pe-options
+      - intent: pe-inform
+      - action: utter_pe-inform
+      - action: utter_fruits/vegetables
+      - action: utter_count-fruits/vegetables
+      - intent: diet-inform-1
+      - action: utter_diet-inform-1
+      - action: utter_saturated-animal-fat
+      - action: utter_count-saturated-animal-fat
+      - intent: coffee
+      - action: utter_coffee
+      - action: utter_count-coffee
+      - intent: coffee-inform
+      - action: utter_coffee-inform
+      - action: utter_water
+      - action: utter_water-count
+      - intent: water-hardness
+      - action: utter_water-hardness
+      - action: utter_location-physical
+      - action: utter_location-list
+      - intent: location-inform
+      - action: utter_location-inform
+      - action: utter_calculated-risk
+      - action: utter_potential-reduction-of-risk
+      - action: utter_solutions-to-reduce-risks
+      - intent: thank
+        entities:
+          - affirm: 'Yes'
+          - thank: Ok thank you!
+      - action: utter_welcome-after-thankyou
+      - action: utter_continue-or-later
+      - action: utter_continue-assessment--intent
+      - intent: continue-assessment-path-intent-0
+        entities:
+          - affirm: 'Yes'
+      - action: utter_going-out
+      - action: utter_yes-no-social-going-out
+      - intent: people-seen-question
+      - action: utter_people-seen-question
+      - action: utter_count-people-seen
+      - intent: social-inform
+      - action: utter_social-inform
+      - action: utter_sleep-hours-question
+      - intent: count-sleep-hours
+        entities:
+          - hours-sleep: '6'
+      - action: utter_sleep-inform
+  - story: Welcome Path + Untitled Path + Man Path + BMI Path + Background Path + Smoking Path + Smoking  + Physical activity Path + Diet Path + Risk Prediction Path + Untitled Path + Continue assessment Path + Social Path + Sleep Path
+    steps:
+      - intent: greet
+      - action: utter_welcome-greet
+      - action: utter_disclaimer
+      - intent: affirm
+      - action: utter_age
+      - intent: age-user
+        entities:
+          - age: '32'
+      - action: utter_gender
+      - action: utter_gender-intent
+      - intent: man-path-intent-0
+      - action: utter_bmi-intro
+      - action: utter_weight-question
+      - intent: bmi-weight-user
+        entities:
+          - weight: '60'
+      - action: utter_height-question
+      - intent: bmi-height-user
+        entities:
+          - height: '165'
+      - action: utter_background-path-intent-0
+      - intent: background-path-intent-1
+        entities:
+          - racial-id: middle-eastern
+      - action: utter_heredity
+      - action: utter_heredity-affirm-deny
+      - intent: smoking-path-intent-0
+      - action: utter_smoking-path-intent-0
+      - action: utter_smoking-affirm-deny
+      - intent: smoking-initial
+      - action: utter_smoking-initial
+      - action: utter_yes-smoking
+      - intent: smoking-inform
+      - action: utter_smoking-inform
+      - action: utter_pe-start
+      - action: utter_pe-options
+      - intent: pe-inform
+      - action: utter_pe-inform
+      - action: utter_fruits/vegetables
+      - action: utter_count-fruits/vegetables
+      - intent: diet-inform-1
+      - action: utter_diet-inform-1
+      - action: utter_saturated-animal-fat
+      - action: utter_count-saturated-animal-fat
+      - intent: coffee
+      - action: utter_coffee
+      - action: utter_count-coffee
+      - intent: coffee-inform
+      - action: utter_coffee-inform
+      - action: utter_water
+      - action: utter_water-count
+      - intent: water-hardness
+      - action: utter_water-hardness
+      - action: utter_location-physical
+      - action: utter_location-list
+      - intent: location-inform
+      - action: utter_location-inform
+      - action: utter_calculated-risk
+      - action: utter_potential-reduction-of-risk
+      - action: utter_solutions-to-reduce-risks
+      - intent: thank
+        entities:
+          - affirm: 'Yes'
+          - thank: Ok thank you!
+      - action: utter_welcome-after-thankyou
+      - action: utter_continue-or-later
+      - action: utter_continue-assessment--intent
+      - intent: continue-assessment-path-intent-0
+        entities:
+          - affirm: 'Yes'
+      - action: utter_going-out
+      - action: utter_yes-no-social-going-out
+      - intent: people-seen-question
+      - action: utter_people-seen-question
+      - action: utter_count-people-seen
+      - intent: social-inform
+      - action: utter_social-inform
+      - action: utter_sleep-hours-question
+      - intent: count-sleep-hours
+        entities:
+          - hours-sleep: '6'
+      - action: utter_sleep-inform
+  - story: Welcome Path + Untitled Path + Man Path + BMI Path + Background Path + Smoking Path + Smoking  + Not Smoking + Physical activity Path + Diet Path + Risk Prediction Path + Untitled Path + Continue assessment Path + Social Path + Sleep Path
+    steps:
+      - intent: greet
+      - action: utter_welcome-greet
+      - action: utter_disclaimer
+      - intent: affirm
+      - action: utter_age
+      - intent: age-user
+        entities:
+          - age: '32'
+      - action: utter_gender
+      - action: utter_gender-intent
+      - intent: man-path-intent-0
+      - action: utter_bmi-intro
+      - action: utter_weight-question
+      - intent: bmi-weight-user
+        entities:
+          - weight: '60'
+      - action: utter_height-question
+      - intent: bmi-height-user
+        entities:
+          - height: '165'
+      - action: utter_background-path-intent-0
+      - intent: background-path-intent-1
+        entities:
+          - racial-id: middle-eastern
+      - action: utter_heredity
+      - action: utter_heredity-affirm-deny
+      - intent: smoking-path-intent-0
+      - action: utter_smoking-path-intent-0
+      - action: utter_smoking-affirm-deny
+      - intent: smoking-initial
+      - action: utter_smoking-initial
+      - action: utter_yes-smoking
+      - intent: not-smoking
+      - action: utter_not-smoking
+      - action: utter_pe-start
+      - action: utter_pe-options
+      - intent: pe-inform
+      - action: utter_pe-inform
+      - action: utter_fruits/vegetables
+      - action: utter_count-fruits/vegetables
+      - intent: diet-inform-1
+      - action: utter_diet-inform-1
+      - action: utter_saturated-animal-fat
+      - action: utter_count-saturated-animal-fat
+      - intent: coffee
+      - action: utter_coffee
+      - action: utter_count-coffee
+      - intent: coffee-inform
+      - action: utter_coffee-inform
+      - action: utter_water
+      - action: utter_water-count
+      - intent: water-hardness
+      - action: utter_water-hardness
+      - action: utter_location-physical
+      - action: utter_location-list
+      - intent: location-inform
+      - action: utter_location-inform
+      - action: utter_calculated-risk
+      - action: utter_potential-reduction-of-risk
+      - action: utter_solutions-to-reduce-risks
+      - intent: thank
+        entities:
+          - affirm: 'Yes'
+          - thank: Ok thank you!
+      - action: utter_welcome-after-thankyou
+      - action: utter_continue-or-later
+      - action: utter_continue-assessment--intent
+      - intent: continue-assessment-path-intent-0
+        entities:
+          - affirm: 'Yes'
+      - action: utter_going-out
+      - action: utter_yes-no-social-going-out
+      - intent: people-seen-question
+      - action: utter_people-seen-question
+      - action: utter_count-people-seen
+      - intent: social-inform
+      - action: utter_social-inform
+      - action: utter_sleep-hours-question
+      - intent: count-sleep-hours
+        entities:
+          - hours-sleep: '6'
+      - action: utter_sleep-inform
+  - story: Welcome Path + Untitled Path + Man Path + BMI Path + Background Path + Smoking Path + Not Smoking + Physical activity Path + Diet Path + Risk Prediction Path + Untitled Path + Continue assessment Path + Social Path + Sleep Path
+    steps:
+      - intent: greet
+      - action: utter_welcome-greet
+      - action: utter_disclaimer
+      - intent: affirm
+      - action: utter_age
+      - intent: age-user
+        entities:
+          - age: '32'
+      - action: utter_gender
+      - action: utter_gender-intent
+      - intent: man-path-intent-0
+      - action: utter_bmi-intro
+      - action: utter_weight-question
+      - intent: bmi-weight-user
+        entities:
+          - weight: '60'
+      - action: utter_height-question
+      - intent: bmi-height-user
+        entities:
+          - height: '165'
+      - action: utter_background-path-intent-0
+      - intent: background-path-intent-1
+        entities:
+          - racial-id: middle-eastern
+      - action: utter_heredity
+      - action: utter_heredity-affirm-deny
+      - intent: smoking-path-intent-0
+      - action: utter_smoking-path-intent-0
+      - action: utter_smoking-affirm-deny
+      - intent: not-smoking
+      - action: utter_not-smoking
+      - action: utter_pe-start
+      - action: utter_pe-options
+      - intent: pe-inform
+      - action: utter_pe-inform
+      - action: utter_fruits/vegetables
+      - action: utter_count-fruits/vegetables
+      - intent: diet-inform-1
+      - action: utter_diet-inform-1
+      - action: utter_saturated-animal-fat
+      - action: utter_count-saturated-animal-fat
+      - intent: coffee
+      - action: utter_coffee
+      - action: utter_count-coffee
+      - intent: coffee-inform
+      - action: utter_coffee-inform
+      - action: utter_water
+      - action: utter_water-count
+      - intent: water-hardness
+      - action: utter_water-hardness
+      - action: utter_location-physical
+      - action: utter_location-list
+      - intent: location-inform
+      - action: utter_location-inform
+      - action: utter_calculated-risk
+      - action: utter_potential-reduction-of-risk
+      - action: utter_solutions-to-reduce-risks
+      - intent: thank
+        entities:
+          - affirm: 'Yes'
+          - thank: Ok thank you!
+      - action: utter_welcome-after-thankyou
+      - action: utter_continue-or-later
+      - action: utter_continue-assessment--intent
+      - intent: continue-assessment-path-intent-0
+        entities:
+          - affirm: 'Yes'
+      - action: utter_going-out
+      - action: utter_yes-no-social-going-out
+      - intent: people-seen-question
+      - action: utter_people-seen-question
+      - action: utter_count-people-seen
+      - intent: social-inform
+      - action: utter_social-inform
+      - action: utter_sleep-hours-question
+      - intent: count-sleep-hours
+        entities:
+          - hours-sleep: '6'
+      - action: utter_sleep-inform
+  - story: Untitled Path + Welcome Path
+    steps:
+      - action: utter_first-time-user-intent
+      - intent: welcome-greet
+      - action: utter_welcome-greet
+      - action: utter_disclaimer
+      - intent: affirm
+      - action: utter_age
+      - intent: age-user
+        entities:
+          - age: '32'
+      - action: utter_gender
+      - action: utter_untitled-path-intent-20
+  - story: Untitled Path + Welcome Path + Untitled Path + Woman Path + Untitled Path + Pregnant Path + BMI Path + Background Path + Smoking Path + Smoking  + Physical activity Path + Diet Path + Risk Prediction Path + Untitled Path + Stop assessment Path
+    steps:
+      - action: utter_first-time-user-intent
+      - intent: welcome-greet
+      - action: utter_welcome-greet
+      - action: utter_disclaimer
+      - intent: affirm
+      - action: utter_age
+      - intent: age-user
+        entities:
+          - age: '32'
+      - action: utter_gender
+      - action: utter_gender-intent
+      - intent: woman-path-intent-0
+      - action: utter_woman-path-intent-1
+      - action: utter_pregnant
+      - action: utter_pregnant-intent
+      - intent: pregnant-path-intent-1
+        entities:
+          - affirm: 'Yes'
+      - action: utter_pregnant-path-intent-0
+      - action: utter_bmi-intro
+      - action: utter_weight-question
+      - intent: bmi-weight-user
+        entities:
+          - weight: '60'
+      - action: utter_height-question
+      - intent: bmi-height-user
+        entities:
+          - height: '165'
+      - action: utter_background-path-intent-0
+      - intent: background-path-intent-1
+        entities:
+          - racial-id: middle-eastern
+      - action: utter_heredity
+      - action: utter_heredity-affirm-deny
+      - intent: smoking-path-intent-0
+      - action: utter_smoking-path-intent-0
+      - action: utter_smoking-affirm-deny
+      - intent: smoking-initial
+      - action: utter_smoking-initial
+      - action: utter_yes-smoking
+      - intent: smoking-inform
+      - action: utter_smoking-inform
+      - action: utter_pe-start
+      - action: utter_pe-options
+      - intent: pe-inform
+      - action: utter_pe-inform
+      - action: utter_fruits/vegetables
+      - action: utter_count-fruits/vegetables
+      - intent: diet-inform-1
+      - action: utter_diet-inform-1
+      - action: utter_saturated-animal-fat
+      - action: utter_count-saturated-animal-fat
+      - intent: coffee
+      - action: utter_coffee
+      - action: utter_count-coffee
+      - intent: coffee-inform
+      - action: utter_coffee-inform
+      - action: utter_water
+      - action: utter_water-count
+      - intent: water-hardness
+      - action: utter_water-hardness
+      - action: utter_location-physical
+      - action: utter_location-list
+      - intent: location-inform
+      - action: utter_location-inform
+      - action: utter_calculated-risk
+      - action: utter_potential-reduction-of-risk
+      - action: utter_solutions-to-reduce-risks
+      - intent: thank
+        entities:
+          - affirm: 'Yes'
+          - thank: Ok thank you!
+      - action: utter_welcome-after-thankyou
+      - action: utter_continue-or-later
+      - action: utter_continue-assessment--intent
+      - intent: stop-assessment-path-intent-0
+        entities:
+          - deny: 'No'
+      - action: utter_stop-assessment-path-intent-1
+  - story: Untitled Path + Welcome Path + Untitled Path + Woman Path + Untitled Path + Pregnant Path + BMI Path + Background Path + Smoking Path + Smoking  + Not Smoking + Physical activity Path + Diet Path + Risk Prediction Path + Untitled Path + Stop assessment Path
+    steps:
+      - action: utter_first-time-user-intent
+      - intent: welcome-greet
+      - action: utter_welcome-greet
+      - action: utter_disclaimer
+      - intent: affirm
+      - action: utter_age
+      - intent: age-user
+        entities:
+          - age: '32'
+      - action: utter_gender
+      - action: utter_gender-intent
+      - intent: woman-path-intent-0
+      - action: utter_woman-path-intent-1
+      - action: utter_pregnant
+      - action: utter_pregnant-intent
+      - intent: pregnant-path-intent-1
+        entities:
+          - affirm: 'Yes'
+      - action: utter_pregnant-path-intent-0
+      - action: utter_bmi-intro
+      - action: utter_weight-question
+      - intent: bmi-weight-user
+        entities:
+          - weight: '60'
+      - action: utter_height-question
+      - intent: bmi-height-user
+        entities:
+          - height: '165'
+      - action: utter_background-path-intent-0
+      - intent: background-path-intent-1
+        entities:
+          - racial-id: middle-eastern
+      - action: utter_heredity
+      - action: utter_heredity-affirm-deny
+      - intent: smoking-path-intent-0
+      - action: utter_smoking-path-intent-0
+      - action: utter_smoking-affirm-deny
+      - intent: smoking-initial
+      - action: utter_smoking-initial
+      - action: utter_yes-smoking
+      - intent: not-smoking
+      - action: utter_not-smoking
+      - action: utter_pe-start
+      - action: utter_pe-options
+      - intent: pe-inform
+      - action: utter_pe-inform
+      - action: utter_fruits/vegetables
+      - action: utter_count-fruits/vegetables
+      - intent: diet-inform-1
+      - action: utter_diet-inform-1
+      - action: utter_saturated-animal-fat
+      - action: utter_count-saturated-animal-fat
+      - intent: coffee
+      - action: utter_coffee
+      - action: utter_count-coffee
+      - intent: coffee-inform
+      - action: utter_coffee-inform
+      - action: utter_water
+      - action: utter_water-count
+      - intent: water-hardness
+      - action: utter_water-hardness
+      - action: utter_location-physical
+      - action: utter_location-list
+      - intent: location-inform
+      - action: utter_location-inform
+      - action: utter_calculated-risk
+      - action: utter_potential-reduction-of-risk
+      - action: utter_solutions-to-reduce-risks
+      - intent: thank
+        entities:
+          - affirm: 'Yes'
+          - thank: Ok thank you!
+      - action: utter_welcome-after-thankyou
+      - action: utter_continue-or-later
+      - action: utter_continue-assessment--intent
+      - intent: stop-assessment-path-intent-0
+        entities:
+          - deny: 'No'
+      - action: utter_stop-assessment-path-intent-1
+  - story: Untitled Path + Welcome Path + Untitled Path + Woman Path + Untitled Path + Pregnant Path + BMI Path + Background Path + Smoking Path + Not Smoking + Physical activity Path + Diet Path + Risk Prediction Path + Untitled Path + Stop assessment Path
+    steps:
+      - action: utter_first-time-user-intent
+      - intent: welcome-greet
+      - action: utter_welcome-greet
+      - action: utter_disclaimer
+      - intent: affirm
+      - action: utter_age
+      - intent: age-user
+        entities:
+          - age: '32'
+      - action: utter_gender
+      - action: utter_gender-intent
+      - intent: woman-path-intent-0
+      - action: utter_woman-path-intent-1
+      - action: utter_pregnant
+      - action: utter_pregnant-intent
+      - intent: pregnant-path-intent-1
+        entities:
+          - affirm: 'Yes'
+      - action: utter_pregnant-path-intent-0
+      - action: utter_bmi-intro
+      - action: utter_weight-question
+      - intent: bmi-weight-user
+        entities:
+          - weight: '60'
+      - action: utter_height-question
+      - intent: bmi-height-user
+        entities:
+          - height: '165'
+      - action: utter_background-path-intent-0
+      - intent: background-path-intent-1
+        entities:
+          - racial-id: middle-eastern
+      - action: utter_heredity
+      - action: utter_heredity-affirm-deny
+      - intent: smoking-path-intent-0
+      - action: utter_smoking-path-intent-0
+      - action: utter_smoking-affirm-deny
+      - intent: not-smoking
+      - action: utter_not-smoking
+      - action: utter_pe-start
+      - action: utter_pe-options
+      - intent: pe-inform
+      - action: utter_pe-inform
+      - action: utter_fruits/vegetables
+      - action: utter_count-fruits/vegetables
+      - intent: diet-inform-1
+      - action: utter_diet-inform-1
+      - action: utter_saturated-animal-fat
+      - action: utter_count-saturated-animal-fat
+      - intent: coffee
+      - action: utter_coffee
+      - action: utter_count-coffee
+      - intent: coffee-inform
+      - action: utter_coffee-inform
+      - action: utter_water
+      - action: utter_water-count
+      - intent: water-hardness
+      - action: utter_water-hardness
+      - action: utter_location-physical
+      - action: utter_location-list
+      - intent: location-inform
+      - action: utter_location-inform
+      - action: utter_calculated-risk
+      - action: utter_potential-reduction-of-risk
+      - action: utter_solutions-to-reduce-risks
+      - intent: thank
+        entities:
+          - affirm: 'Yes'
+          - thank: Ok thank you!
+      - action: utter_welcome-after-thankyou
+      - action: utter_continue-or-later
+      - action: utter_continue-assessment--intent
+      - intent: stop-assessment-path-intent-0
+        entities:
+          - deny: 'No'
+      - action: utter_stop-assessment-path-intent-1
+  - story: Untitled Path + Welcome Path + Untitled Path + Woman Path + Untitled Path + Not Pregnant Path + BMI Path + Background Path + Smoking Path + Smoking  + Physical activity Path + Diet Path + Risk Prediction Path + Untitled Path + Stop assessment Path
+    steps:
+      - action: utter_first-time-user-intent
+      - intent: welcome-greet
+      - action: utter_welcome-greet
+      - action: utter_disclaimer
+      - intent: affirm
+      - action: utter_age
+      - intent: age-user
+        entities:
+          - age: '32'
+      - action: utter_gender
+      - action: utter_gender-intent
+      - intent: woman-path-intent-0
+      - action: utter_woman-path-intent-1
+      - action: utter_pregnant
+      - action: utter_pregnant-intent
+      - intent: deny
+        entities:
+          - deny: 'No'
+      - action: utter_bmi-intro
+      - action: utter_weight-question
+      - intent: bmi-weight-user
+        entities:
+          - weight: '60'
+      - action: utter_height-question
+      - intent: bmi-height-user
+        entities:
+          - height: '165'
+      - action: utter_background-path-intent-0
+      - intent: background-path-intent-1
+        entities:
+          - racial-id: middle-eastern
+      - action: utter_heredity
+      - action: utter_heredity-affirm-deny
+      - intent: smoking-path-intent-0
+      - action: utter_smoking-path-intent-0
+      - action: utter_smoking-affirm-deny
+      - intent: smoking-initial
+      - action: utter_smoking-initial
+      - action: utter_yes-smoking
+      - intent: smoking-inform
+      - action: utter_smoking-inform
+      - action: utter_pe-start
+      - action: utter_pe-options
+      - intent: pe-inform
+      - action: utter_pe-inform
+      - action: utter_fruits/vegetables
+      - action: utter_count-fruits/vegetables
+      - intent: diet-inform-1
+      - action: utter_diet-inform-1
+      - action: utter_saturated-animal-fat
+      - action: utter_count-saturated-animal-fat
+      - intent: coffee
+      - action: utter_coffee
+      - action: utter_count-coffee
+      - intent: coffee-inform
+      - action: utter_coffee-inform
+      - action: utter_water
+      - action: utter_water-count
+      - intent: water-hardness
+      - action: utter_water-hardness
+      - action: utter_location-physical
+      - action: utter_location-list
+      - intent: location-inform
+      - action: utter_location-inform
+      - action: utter_calculated-risk
+      - action: utter_potential-reduction-of-risk
+      - action: utter_solutions-to-reduce-risks
+      - intent: thank
+        entities:
+          - affirm: 'Yes'
+          - thank: Ok thank you!
+      - action: utter_welcome-after-thankyou
+      - action: utter_continue-or-later
+      - action: utter_continue-assessment--intent
+      - intent: stop-assessment-path-intent-0
+        entities:
+          - deny: 'No'
+      - action: utter_stop-assessment-path-intent-1
+  - story: Untitled Path + Welcome Path + Untitled Path + Woman Path + Untitled Path + Not Pregnant Path + BMI Path + Background Path + Smoking Path + Smoking  + Not Smoking + Physical activity Path + Diet Path + Risk Prediction Path + Untitled Path + Stop assessment Path
+    steps:
+      - action: utter_first-time-user-intent
+      - intent: welcome-greet
+      - action: utter_welcome-greet
+      - action: utter_disclaimer
+      - intent: affirm
+      - action: utter_age
+      - intent: age-user
+        entities:
+          - age: '32'
+      - action: utter_gender
+      - action: utter_gender-intent
+      - intent: woman-path-intent-0
+      - action: utter_woman-path-intent-1
+      - action: utter_pregnant
+      - action: utter_pregnant-intent
+      - intent: deny
+        entities:
+          - deny: 'No'
+      - action: utter_bmi-intro
+      - action: utter_weight-question
+      - intent: bmi-weight-user
+        entities:
+          - weight: '60'
+      - action: utter_height-question
+      - intent: bmi-height-user
+        entities:
+          - height: '165'
+      - action: utter_background-path-intent-0
+      - intent: background-path-intent-1
+        entities:
+          - racial-id: middle-eastern
+      - action: utter_heredity
+      - action: utter_heredity-affirm-deny
+      - intent: smoking-path-intent-0
+      - action: utter_smoking-path-intent-0
+      - action: utter_smoking-affirm-deny
+      - intent: smoking-initial
+      - action: utter_smoking-initial
+      - action: utter_yes-smoking
+      - intent: not-smoking
+      - action: utter_not-smoking
+      - action: utter_pe-start
+      - action: utter_pe-options
+      - intent: pe-inform
+      - action: utter_pe-inform
+      - action: utter_fruits/vegetables
+      - action: utter_count-fruits/vegetables
+      - intent: diet-inform-1
+      - action: utter_diet-inform-1
+      - action: utter_saturated-animal-fat
+      - action: utter_count-saturated-animal-fat
+      - intent: coffee
+      - action: utter_coffee
+      - action: utter_count-coffee
+      - intent: coffee-inform
+      - action: utter_coffee-inform
+      - action: utter_water
+      - action: utter_water-count
+      - intent: water-hardness
+      - action: utter_water-hardness
+      - action: utter_location-physical
+      - action: utter_location-list
+      - intent: location-inform
+      - action: utter_location-inform
+      - action: utter_calculated-risk
+      - action: utter_potential-reduction-of-risk
+      - action: utter_solutions-to-reduce-risks
+      - intent: thank
+        entities:
+          - affirm: 'Yes'
+          - thank: Ok thank you!
+      - action: utter_welcome-after-thankyou
+      - action: utter_continue-or-later
+      - action: utter_continue-assessment--intent
+      - intent: stop-assessment-path-intent-0
+        entities:
+          - deny: 'No'
+      - action: utter_stop-assessment-path-intent-1
+  - story: Untitled Path + Welcome Path + Untitled Path + Woman Path + Untitled Path + Not Pregnant Path + BMI Path + Background Path + Smoking Path + Not Smoking + Physical activity Path + Diet Path + Risk Prediction Path + Untitled Path + Stop assessment Path
+    steps:
+      - action: utter_first-time-user-intent
+      - intent: welcome-greet
+      - action: utter_welcome-greet
+      - action: utter_disclaimer
+      - intent: affirm
+      - action: utter_age
+      - intent: age-user
+        entities:
+          - age: '32'
+      - action: utter_gender
+      - action: utter_gender-intent
+      - intent: woman-path-intent-0
+      - action: utter_woman-path-intent-1
+      - action: utter_pregnant
+      - action: utter_pregnant-intent
+      - intent: deny
+        entities:
+          - deny: 'No'
+      - action: utter_bmi-intro
+      - action: utter_weight-question
+      - intent: bmi-weight-user
+        entities:
+          - weight: '60'
+      - action: utter_height-question
+      - intent: bmi-height-user
+        entities:
+          - height: '165'
+      - action: utter_background-path-intent-0
+      - intent: background-path-intent-1
+        entities:
+          - racial-id: middle-eastern
+      - action: utter_heredity
+      - action: utter_heredity-affirm-deny
+      - intent: smoking-path-intent-0
+      - action: utter_smoking-path-intent-0
+      - action: utter_smoking-affirm-deny
+      - intent: not-smoking
+      - action: utter_not-smoking
+      - action: utter_pe-start
+      - action: utter_pe-options
+      - intent: pe-inform
+      - action: utter_pe-inform
+      - action: utter_fruits/vegetables
+      - action: utter_count-fruits/vegetables
+      - intent: diet-inform-1
+      - action: utter_diet-inform-1
+      - action: utter_saturated-animal-fat
+      - action: utter_count-saturated-animal-fat
+      - intent: coffee
+      - action: utter_coffee
+      - action: utter_count-coffee
+      - intent: coffee-inform
+      - action: utter_coffee-inform
+      - action: utter_water
+      - action: utter_water-count
+      - intent: water-hardness
+      - action: utter_water-hardness
+      - action: utter_location-physical
+      - action: utter_location-list
+      - intent: location-inform
+      - action: utter_location-inform
+      - action: utter_calculated-risk
+      - action: utter_potential-reduction-of-risk
+      - action: utter_solutions-to-reduce-risks
+      - intent: thank
+        entities:
+          - affirm: 'Yes'
+          - thank: Ok thank you!
+      - action: utter_welcome-after-thankyou
+      - action: utter_continue-or-later
+      - action: utter_continue-assessment--intent
+      - intent: stop-assessment-path-intent-0
+        entities:
+          - deny: 'No'
+      - action: utter_stop-assessment-path-intent-1
+  - story: Untitled Path + Welcome Path + Untitled Path + Man Path + BMI Path + Background Path + Smoking Path + Smoking  + Physical activity Path + Diet Path + Risk Prediction Path + Untitled Path + Stop assessment Path
+    steps:
+      - action: utter_first-time-user-intent
+      - intent: welcome-greet
+      - action: utter_welcome-greet
+      - action: utter_disclaimer
+      - intent: affirm
+      - action: utter_age
+      - intent: age-user
+        entities:
+          - age: '32'
+      - action: utter_gender
+      - action: utter_gender-intent
+      - intent: man-path-intent-0
+      - action: utter_bmi-intro
+      - action: utter_weight-question
+      - intent: bmi-weight-user
+        entities:
+          - weight: '60'
+      - action: utter_height-question
+      - intent: bmi-height-user
+        entities:
+          - height: '165'
+      - action: utter_background-path-intent-0
+      - intent: background-path-intent-1
+        entities:
+          - racial-id: middle-eastern
+      - action: utter_heredity
+      - action: utter_heredity-affirm-deny
+      - intent: smoking-path-intent-0
+      - action: utter_smoking-path-intent-0
+      - action: utter_smoking-affirm-deny
+      - intent: smoking-initial
+      - action: utter_smoking-initial
+      - action: utter_yes-smoking
+      - intent: smoking-inform
+      - action: utter_smoking-inform
+      - action: utter_pe-start
+      - action: utter_pe-options
+      - intent: pe-inform
+      - action: utter_pe-inform
+      - action: utter_fruits/vegetables
+      - action: utter_count-fruits/vegetables
+      - intent: diet-inform-1
+      - action: utter_diet-inform-1
+      - action: utter_saturated-animal-fat
+      - action: utter_count-saturated-animal-fat
+      - intent: coffee
+      - action: utter_coffee
+      - action: utter_count-coffee
+      - intent: coffee-inform
+      - action: utter_coffee-inform
+      - action: utter_water
+      - action: utter_water-count
+      - intent: water-hardness
+      - action: utter_water-hardness
+      - action: utter_location-physical
+      - action: utter_location-list
+      - intent: location-inform
+      - action: utter_location-inform
+      - action: utter_calculated-risk
+      - action: utter_potential-reduction-of-risk
+      - action: utter_solutions-to-reduce-risks
+      - intent: thank
+        entities:
+          - affirm: 'Yes'
+          - thank: Ok thank you!
+      - action: utter_welcome-after-thankyou
+      - action: utter_continue-or-later
+      - action: utter_continue-assessment--intent
+      - intent: stop-assessment-path-intent-0
+        entities:
+          - deny: 'No'
+      - action: utter_stop-assessment-path-intent-1
+  - story: Untitled Path + Welcome Path + Untitled Path + Man Path + BMI Path + Background Path + Smoking Path + Smoking  + Not Smoking + Physical activity Path + Diet Path + Risk Prediction Path + Untitled Path + Stop assessment Path
+    steps:
+      - action: utter_first-time-user-intent
+      - intent: welcome-greet
+      - action: utter_welcome-greet
+      - action: utter_disclaimer
+      - intent: affirm
+      - action: utter_age
+      - intent: age-user
+        entities:
+          - age: '32'
+      - action: utter_gender
+      - action: utter_gender-intent
+      - intent: man-path-intent-0
+      - action: utter_bmi-intro
+      - action: utter_weight-question
+      - intent: bmi-weight-user
+        entities:
+          - weight: '60'
+      - action: utter_height-question
+      - intent: bmi-height-user
+        entities:
+          - height: '165'
+      - action: utter_background-path-intent-0
+      - intent: background-path-intent-1
+        entities:
+          - racial-id: middle-eastern
+      - action: utter_heredity
+      - action: utter_heredity-affirm-deny
+      - intent: smoking-path-intent-0
+      - action: utter_smoking-path-intent-0
+      - action: utter_smoking-affirm-deny
+      - intent: smoking-initial
+      - action: utter_smoking-initial
+      - action: utter_yes-smoking
+      - intent: not-smoking
+      - action: utter_not-smoking
+      - action: utter_pe-start
+      - action: utter_pe-options
+      - intent: pe-inform
+      - action: utter_pe-inform
+      - action: utter_fruits/vegetables
+      - action: utter_count-fruits/vegetables
+      - intent: diet-inform-1
+      - action: utter_diet-inform-1
+      - action: utter_saturated-animal-fat
+      - action: utter_count-saturated-animal-fat
+      - intent: coffee
+      - action: utter_coffee
+      - action: utter_count-coffee
+      - intent: coffee-inform
+      - action: utter_coffee-inform
+      - action: utter_water
+      - action: utter_water-count
+      - intent: water-hardness
+      - action: utter_water-hardness
+      - action: utter_location-physical
+      - action: utter_location-list
+      - intent: location-inform
+      - action: utter_location-inform
+      - action: utter_calculated-risk
+      - action: utter_potential-reduction-of-risk
+      - action: utter_solutions-to-reduce-risks
+      - intent: thank
+        entities:
+          - affirm: 'Yes'
+          - thank: Ok thank you!
+      - action: utter_welcome-after-thankyou
+      - action: utter_continue-or-later
+      - action: utter_continue-assessment--intent
+      - intent: stop-assessment-path-intent-0
+        entities:
+          - deny: 'No'
+      - action: utter_stop-assessment-path-intent-1
+  - story: Untitled Path + Welcome Path + Untitled Path + Man Path + BMI Path + Background Path + Smoking Path + Not Smoking + Physical activity Path + Diet Path + Risk Prediction Path + Untitled Path + Stop assessment Path
+    steps:
+      - action: utter_first-time-user-intent
+      - intent: welcome-greet
+      - action: utter_welcome-greet
+      - action: utter_disclaimer
+      - intent: affirm
+      - action: utter_age
+      - intent: age-user
+        entities:
+          - age: '32'
+      - action: utter_gender
+      - action: utter_gender-intent
+      - intent: man-path-intent-0
+      - action: utter_bmi-intro
+      - action: utter_weight-question
+      - intent: bmi-weight-user
+        entities:
+          - weight: '60'
+      - action: utter_height-question
+      - intent: bmi-height-user
+        entities:
+          - height: '165'
+      - action: utter_background-path-intent-0
+      - intent: background-path-intent-1
+        entities:
+          - racial-id: middle-eastern
+      - action: utter_heredity
+      - action: utter_heredity-affirm-deny
+      - intent: smoking-path-intent-0
+      - action: utter_smoking-path-intent-0
+      - action: utter_smoking-affirm-deny
+      - intent: not-smoking
+      - action: utter_not-smoking
+      - action: utter_pe-start
+      - action: utter_pe-options
+      - intent: pe-inform
+      - action: utter_pe-inform
+      - action: utter_fruits/vegetables
+      - action: utter_count-fruits/vegetables
+      - intent: diet-inform-1
+      - action: utter_diet-inform-1
+      - action: utter_saturated-animal-fat
+      - action: utter_count-saturated-animal-fat
+      - intent: coffee
+      - action: utter_coffee
+      - action: utter_count-coffee
+      - intent: coffee-inform
+      - action: utter_coffee-inform
+      - action: utter_water
+      - action: utter_water-count
+      - intent: water-hardness
+      - action: utter_water-hardness
+      - action: utter_location-physical
+      - action: utter_location-list
+      - intent: location-inform
+      - action: utter_location-inform
+      - action: utter_calculated-risk
+      - action: utter_potential-reduction-of-risk
+      - action: utter_solutions-to-reduce-risks
+      - intent: thank
+        entities:
+          - affirm: 'Yes'
+          - thank: Ok thank you!
+      - action: utter_welcome-after-thankyou
+      - action: utter_continue-or-later
+      - action: utter_continue-assessment--intent
+      - intent: stop-assessment-path-intent-0
+        entities:
+          - deny: 'No'
+      - action: utter_stop-assessment-path-intent-1
+  - story: Untitled Path + Welcome back Path + Smoking  + Physical activity Path + Diet Path + Risk Prediction Path + Untitled Path + Stop assessment Path
+    steps:
+      - action: utter_first-time-user-intent
+      - intent: untitled-path-intent-32
+      - action: utter_untitled-path-intent-32
+      - action: utter_smoking-initial
+      - action: utter_yes-smoking
+      - intent: smoking-inform
+      - action: utter_smoking-inform
+      - action: utter_pe-start
+      - action: utter_pe-options
+      - intent: pe-inform
+      - action: utter_pe-inform
+      - action: utter_fruits/vegetables
+      - action: utter_count-fruits/vegetables
+      - intent: diet-inform-1
+      - action: utter_diet-inform-1
+      - action: utter_saturated-animal-fat
+      - action: utter_count-saturated-animal-fat
+      - intent: coffee
+      - action: utter_coffee
+      - action: utter_count-coffee
+      - intent: coffee-inform
+      - action: utter_coffee-inform
+      - action: utter_water
+      - action: utter_water-count
+      - intent: water-hardness
+      - action: utter_water-hardness
+      - action: utter_location-physical
+      - action: utter_location-list
+      - intent: location-inform
+      - action: utter_location-inform
+      - action: utter_calculated-risk
+      - action: utter_potential-reduction-of-risk
+      - action: utter_solutions-to-reduce-risks
+      - intent: thank
+        entities:
+          - affirm: 'Yes'
+          - thank: Ok thank you!
+      - action: utter_welcome-after-thankyou
+      - action: utter_continue-or-later
+      - action: utter_continue-assessment--intent
+      - intent: stop-assessment-path-intent-0
+        entities:
+          - deny: 'No'
+      - action: utter_stop-assessment-path-intent-1
+  - story: Untitled Path + Welcome back Path + Smoking  + Not Smoking + Physical activity Path + Diet Path + Risk Prediction Path + Untitled Path + Stop assessment Path
+    steps:
+      - action: utter_first-time-user-intent
+      - intent: untitled-path-intent-32
+      - action: utter_untitled-path-intent-32
+      - action: utter_smoking-initial
+      - action: utter_yes-smoking
+      - intent: not-smoking
+      - action: utter_not-smoking
+      - action: utter_pe-start
+      - action: utter_pe-options
+      - intent: pe-inform
+      - action: utter_pe-inform
+      - action: utter_fruits/vegetables
+      - action: utter_count-fruits/vegetables
+      - intent: diet-inform-1
+      - action: utter_diet-inform-1
+      - action: utter_saturated-animal-fat
+      - action: utter_count-saturated-animal-fat
+      - intent: coffee
+      - action: utter_coffee
+      - action: utter_count-coffee
+      - intent: coffee-inform
+      - action: utter_coffee-inform
+      - action: utter_water
+      - action: utter_water-count
+      - intent: water-hardness
+      - action: utter_water-hardness
+      - action: utter_location-physical
+      - action: utter_location-list
+      - intent: location-inform
+      - action: utter_location-inform
+      - action: utter_calculated-risk
+      - action: utter_potential-reduction-of-risk
+      - action: utter_solutions-to-reduce-risks
+      - intent: thank
+        entities:
+          - affirm: 'Yes'
+          - thank: Ok thank you!
+      - action: utter_welcome-after-thankyou
+      - action: utter_continue-or-later
+      - action: utter_continue-assessment--intent
+      - intent: stop-assessment-path-intent-0
+        entities:
+          - deny: 'No'
+      - action: utter_stop-assessment-path-intent-1
+  - story: Untitled Path + Welcome Path + Untitled Path + Woman Path + Untitled Path + Pregnant Path + BMI Path + Background Path + Smoking Path + Smoking  + Physical activity Path + Diet Path + Risk Prediction Path + Untitled Path + Continue assessment Path + Social Path + Sleep Path
+    steps:
+      - action: utter_first-time-user-intent
+      - intent: welcome-greet
+      - action: utter_welcome-greet
+      - action: utter_disclaimer
+      - intent: affirm
+      - action: utter_age
+      - intent: age-user
+        entities:
+          - age: '32'
+      - action: utter_gender
+      - action: utter_gender-intent
+      - intent: woman-path-intent-0
+      - action: utter_woman-path-intent-1
+      - action: utter_pregnant
+      - action: utter_pregnant-intent
+      - intent: pregnant-path-intent-1
+        entities:
+          - affirm: 'Yes'
+      - action: utter_pregnant-path-intent-0
+      - action: utter_bmi-intro
+      - action: utter_weight-question
+      - intent: bmi-weight-user
+        entities:
+          - weight: '60'
+      - action: utter_height-question
+      - intent: bmi-height-user
+        entities:
+          - height: '165'
+      - action: utter_background-path-intent-0
+      - intent: background-path-intent-1
+        entities:
+          - racial-id: middle-eastern
+      - action: utter_heredity
+      - action: utter_heredity-affirm-deny
+      - intent: smoking-path-intent-0
+      - action: utter_smoking-path-intent-0
+      - action: utter_smoking-affirm-deny
+      - intent: smoking-initial
+      - action: utter_smoking-initial
+      - action: utter_yes-smoking
+      - intent: smoking-inform
+      - action: utter_smoking-inform
+      - action: utter_pe-start
+      - action: utter_pe-options
+      - intent: pe-inform
+      - action: utter_pe-inform
+      - action: utter_fruits/vegetables
+      - action: utter_count-fruits/vegetables
+      - intent: diet-inform-1
+      - action: utter_diet-inform-1
+      - action: utter_saturated-animal-fat
+      - action: utter_count-saturated-animal-fat
+      - intent: coffee
+      - action: utter_coffee
+      - action: utter_count-coffee
+      - intent: coffee-inform
+      - action: utter_coffee-inform
+      - action: utter_water
+      - action: utter_water-count
+      - intent: water-hardness
+      - action: utter_water-hardness
+      - action: utter_location-physical
+      - action: utter_location-list
+      - intent: location-inform
+      - action: utter_location-inform
+      - action: utter_calculated-risk
+      - action: utter_potential-reduction-of-risk
+      - action: utter_solutions-to-reduce-risks
+      - intent: thank
+        entities:
+          - affirm: 'Yes'
+          - thank: Ok thank you!
+      - action: utter_welcome-after-thankyou
+      - action: utter_continue-or-later
+      - action: utter_continue-assessment--intent
+      - intent: continue-assessment-path-intent-0
+        entities:
+          - affirm: 'Yes'
+      - action: utter_going-out
+      - action: utter_yes-no-social-going-out
+      - intent: people-seen-question
+      - action: utter_people-seen-question
+      - action: utter_count-people-seen
+      - intent: social-inform
+      - action: utter_social-inform
+      - action: utter_sleep-hours-question
+      - intent: count-sleep-hours
+        entities:
+          - hours-sleep: '6'
+      - action: utter_sleep-inform
+  - story: Untitled Path + Welcome Path + Untitled Path + Woman Path + Untitled Path + Pregnant Path + BMI Path + Background Path + Smoking Path + Smoking  + Not Smoking + Physical activity Path + Diet Path + Risk Prediction Path + Untitled Path + Continue assessment Path + Social Path + Sleep Path
+    steps:
+      - action: utter_first-time-user-intent
+      - intent: welcome-greet
+      - action: utter_welcome-greet
+      - action: utter_disclaimer
+      - intent: affirm
+      - action: utter_age
+      - intent: age-user
+        entities:
+          - age: '32'
+      - action: utter_gender
+      - action: utter_gender-intent
+      - intent: woman-path-intent-0
+      - action: utter_woman-path-intent-1
+      - action: utter_pregnant
+      - action: utter_pregnant-intent
+      - intent: pregnant-path-intent-1
+        entities:
+          - affirm: 'Yes'
+      - action: utter_pregnant-path-intent-0
+      - action: utter_bmi-intro
+      - action: utter_weight-question
+      - intent: bmi-weight-user
+        entities:
+          - weight: '60'
+      - action: utter_height-question
+      - intent: bmi-height-user
+        entities:
+          - height: '165'
+      - action: utter_background-path-intent-0
+      - intent: background-path-intent-1
+        entities:
+          - racial-id: middle-eastern
+      - action: utter_heredity
+      - action: utter_heredity-affirm-deny
+      - intent: smoking-path-intent-0
+      - action: utter_smoking-path-intent-0
+      - action: utter_smoking-affirm-deny
+      - intent: smoking-initial
+      - action: utter_smoking-initial
+      - action: utter_yes-smoking
+      - intent: not-smoking
+      - action: utter_not-smoking
+      - action: utter_pe-start
+      - action: utter_pe-options
+      - intent: pe-inform
+      - action: utter_pe-inform
+      - action: utter_fruits/vegetables
+      - action: utter_count-fruits/vegetables
+      - intent: diet-inform-1
+      - action: utter_diet-inform-1
+      - action: utter_saturated-animal-fat
+      - action: utter_count-saturated-animal-fat
+      - intent: coffee
+      - action: utter_coffee
+      - action: utter_count-coffee
+      - intent: coffee-inform
+      - action: utter_coffee-inform
+      - action: utter_water
+      - action: utter_water-count
+      - intent: water-hardness
+      - action: utter_water-hardness
+      - action: utter_location-physical
+      - action: utter_location-list
+      - intent: location-inform
+      - action: utter_location-inform
+      - action: utter_calculated-risk
+      - action: utter_potential-reduction-of-risk
+      - action: utter_solutions-to-reduce-risks
+      - intent: thank
+        entities:
+          - affirm: 'Yes'
+          - thank: Ok thank you!
+      - action: utter_welcome-after-thankyou
+      - action: utter_continue-or-later
+      - action: utter_continue-assessment--intent
+      - intent: continue-assessment-path-intent-0
+        entities:
+          - affirm: 'Yes'
+      - action: utter_going-out
+      - action: utter_yes-no-social-going-out
+      - intent: people-seen-question
+      - action: utter_people-seen-question
+      - action: utter_count-people-seen
+      - intent: social-inform
+      - action: utter_social-inform
+      - action: utter_sleep-hours-question
+      - intent: count-sleep-hours
+        entities:
+          - hours-sleep: '6'
+      - action: utter_sleep-inform
+  - story: Untitled Path + Welcome Path + Untitled Path + Woman Path + Untitled Path + Pregnant Path + BMI Path + Background Path + Smoking Path + Not Smoking + Physical activity Path + Diet Path + Risk Prediction Path + Untitled Path + Continue assessment Path + Social Path + Sleep Path
+    steps:
+      - action: utter_first-time-user-intent
+      - intent: welcome-greet
+      - action: utter_welcome-greet
+      - action: utter_disclaimer
+      - intent: affirm
+      - action: utter_age
+      - intent: age-user
+        entities:
+          - age: '32'
+      - action: utter_gender
+      - action: utter_gender-intent
+      - intent: woman-path-intent-0
+      - action: utter_woman-path-intent-1
+      - action: utter_pregnant
+      - action: utter_pregnant-intent
+      - intent: pregnant-path-intent-1
+        entities:
+          - affirm: 'Yes'
+      - action: utter_pregnant-path-intent-0
+      - action: utter_bmi-intro
+      - action: utter_weight-question
+      - intent: bmi-weight-user
+        entities:
+          - weight: '60'
+      - action: utter_height-question
+      - intent: bmi-height-user
+        entities:
+          - height: '165'
+      - action: utter_background-path-intent-0
+      - intent: background-path-intent-1
+        entities:
+          - racial-id: middle-eastern
+      - action: utter_heredity
+      - action: utter_heredity-affirm-deny
+      - intent: smoking-path-intent-0
+      - action: utter_smoking-path-intent-0
+      - action: utter_smoking-affirm-deny
+      - intent: not-smoking
+      - action: utter_not-smoking
+      - action: utter_pe-start
+      - action: utter_pe-options
+      - intent: pe-inform
+      - action: utter_pe-inform
+      - action: utter_fruits/vegetables
+      - action: utter_count-fruits/vegetables
+      - intent: diet-inform-1
+      - action: utter_diet-inform-1
+      - action: utter_saturated-animal-fat
+      - action: utter_count-saturated-animal-fat
+      - intent: coffee
+      - action: utter_coffee
+      - action: utter_count-coffee
+      - intent: coffee-inform
+      - action: utter_coffee-inform
+      - action: utter_water
+      - action: utter_water-count
+      - intent: water-hardness
+      - action: utter_water-hardness
+      - action: utter_location-physical
+      - action: utter_location-list
+      - intent: location-inform
+      - action: utter_location-inform
+      - action: utter_calculated-risk
+      - action: utter_potential-reduction-of-risk
+      - action: utter_solutions-to-reduce-risks
+      - intent: thank
+        entities:
+          - affirm: 'Yes'
+          - thank: Ok thank you!
+      - action: utter_welcome-after-thankyou
+      - action: utter_continue-or-later
+      - action: utter_continue-assessment--intent
+      - intent: continue-assessment-path-intent-0
+        entities:
+          - affirm: 'Yes'
+      - action: utter_going-out
+      - action: utter_yes-no-social-going-out
+      - intent: people-seen-question
+      - action: utter_people-seen-question
+      - action: utter_count-people-seen
+      - intent: social-inform
+      - action: utter_social-inform
+      - action: utter_sleep-hours-question
+      - intent: count-sleep-hours
+        entities:
+          - hours-sleep: '6'
+      - action: utter_sleep-inform
+  - story: Untitled Path + Welcome Path + Untitled Path + Woman Path + Untitled Path + Not Pregnant Path + BMI Path + Background Path + Smoking Path + Smoking  + Physical activity Path + Diet Path + Risk Prediction Path + Untitled Path + Continue assessment Path + Social Path + Sleep Path
+    steps:
+      - action: utter_first-time-user-intent
+      - intent: welcome-greet
+      - action: utter_welcome-greet
+      - action: utter_disclaimer
+      - intent: affirm
+      - action: utter_age
+      - intent: age-user
+        entities:
+          - age: '32'
+      - action: utter_gender
+      - action: utter_gender-intent
+      - intent: woman-path-intent-0
+      - action: utter_woman-path-intent-1
+      - action: utter_pregnant
+      - action: utter_pregnant-intent
+      - intent: deny
+        entities:
+          - deny: 'No'
+      - action: utter_bmi-intro
+      - action: utter_weight-question
+      - intent: bmi-weight-user
+        entities:
+          - weight: '60'
+      - action: utter_height-question
+      - intent: bmi-height-user
+        entities:
+          - height: '165'
+      - action: utter_background-path-intent-0
+      - intent: background-path-intent-1
+        entities:
+          - racial-id: middle-eastern
+      - action: utter_heredity
+      - action: utter_heredity-affirm-deny
+      - intent: smoking-path-intent-0
+      - action: utter_smoking-path-intent-0
+      - action: utter_smoking-affirm-deny
+      - intent: smoking-initial
+      - action: utter_smoking-initial
+      - action: utter_yes-smoking
+      - intent: smoking-inform
+      - action: utter_smoking-inform
+      - action: utter_pe-start
+      - action: utter_pe-options
+      - intent: pe-inform
+      - action: utter_pe-inform
+      - action: utter_fruits/vegetables
+      - action: utter_count-fruits/vegetables
+      - intent: diet-inform-1
+      - action: utter_diet-inform-1
+      - action: utter_saturated-animal-fat
+      - action: utter_count-saturated-animal-fat
+      - intent: coffee
+      - action: utter_coffee
+      - action: utter_count-coffee
+      - intent: coffee-inform
+      - action: utter_coffee-inform
+      - action: utter_water
+      - action: utter_water-count
+      - intent: water-hardness
+      - action: utter_water-hardness
+      - action: utter_location-physical
+      - action: utter_location-list
+      - intent: location-inform
+      - action: utter_location-inform
+      - action: utter_calculated-risk
+      - action: utter_potential-reduction-of-risk
+      - action: utter_solutions-to-reduce-risks
+      - intent: thank
+        entities:
+          - affirm: 'Yes'
+          - thank: Ok thank you!
+      - action: utter_welcome-after-thankyou
+      - action: utter_continue-or-later
+      - action: utter_continue-assessment--intent
+      - intent: continue-assessment-path-intent-0
+        entities:
+          - affirm: 'Yes'
+      - action: utter_going-out
+      - action: utter_yes-no-social-going-out
+      - intent: people-seen-question
+      - action: utter_people-seen-question
+      - action: utter_count-people-seen
+      - intent: social-inform
+      - action: utter_social-inform
+      - action: utter_sleep-hours-question
+      - intent: count-sleep-hours
+        entities:
+          - hours-sleep: '6'
+      - action: utter_sleep-inform
+  - story: Untitled Path + Welcome Path + Untitled Path + Woman Path + Untitled Path + Not Pregnant Path + BMI Path + Background Path + Smoking Path + Smoking  + Not Smoking + Physical activity Path + Diet Path + Risk Prediction Path + Untitled Path + Continue assessment Path + Social Path + Sleep Path
+    steps:
+      - action: utter_first-time-user-intent
+      - intent: welcome-greet
+      - action: utter_welcome-greet
+      - action: utter_disclaimer
+      - intent: affirm
+      - action: utter_age
+      - intent: age-user
+        entities:
+          - age: '32'
+      - action: utter_gender
+      - action: utter_gender-intent
+      - intent: woman-path-intent-0
+      - action: utter_woman-path-intent-1
+      - action: utter_pregnant
+      - action: utter_pregnant-intent
+      - intent: deny
+        entities:
+          - deny: 'No'
+      - action: utter_bmi-intro
+      - action: utter_weight-question
+      - intent: bmi-weight-user
+        entities:
+          - weight: '60'
+      - action: utter_height-question
+      - intent: bmi-height-user
+        entities:
+          - height: '165'
+      - action: utter_background-path-intent-0
+      - intent: background-path-intent-1
+        entities:
+          - racial-id: middle-eastern
+      - action: utter_heredity
+      - action: utter_heredity-affirm-deny
+      - intent: smoking-path-intent-0
+      - action: utter_smoking-path-intent-0
+      - action: utter_smoking-affirm-deny
+      - intent: smoking-initial
+      - action: utter_smoking-initial
+      - action: utter_yes-smoking
+      - intent: not-smoking
+      - action: utter_not-smoking
+      - action: utter_pe-start
+      - action: utter_pe-options
+      - intent: pe-inform
+      - action: utter_pe-inform
+      - action: utter_fruits/vegetables
+      - action: utter_count-fruits/vegetables
+      - intent: diet-inform-1
+      - action: utter_diet-inform-1
+      - action: utter_saturated-animal-fat
+      - action: utter_count-saturated-animal-fat
+      - intent: coffee
+      - action: utter_coffee
+      - action: utter_count-coffee
+      - intent: coffee-inform
+      - action: utter_coffee-inform
+      - action: utter_water
+      - action: utter_water-count
+      - intent: water-hardness
+      - action: utter_water-hardness
+      - action: utter_location-physical
+      - action: utter_location-list
+      - intent: location-inform
+      - action: utter_location-inform
+      - action: utter_calculated-risk
+      - action: utter_potential-reduction-of-risk
+      - action: utter_solutions-to-reduce-risks
+      - intent: thank
+        entities:
+          - affirm: 'Yes'
+          - thank: Ok thank you!
+      - action: utter_welcome-after-thankyou
+      - action: utter_continue-or-later
+      - action: utter_continue-assessment--intent
+      - intent: continue-assessment-path-intent-0
+        entities:
+          - affirm: 'Yes'
+      - action: utter_going-out
+      - action: utter_yes-no-social-going-out
+      - intent: people-seen-question
+      - action: utter_people-seen-question
+      - action: utter_count-people-seen
+      - intent: social-inform
+      - action: utter_social-inform
+      - action: utter_sleep-hours-question
+      - intent: count-sleep-hours
+        entities:
+          - hours-sleep: '6'
+      - action: utter_sleep-inform
+  - story: Untitled Path + Welcome Path + Untitled Path + Woman Path + Untitled Path + Not Pregnant Path + BMI Path + Background Path + Smoking Path + Not Smoking + Physical activity Path + Diet Path + Risk Prediction Path + Untitled Path + Continue assessment Path + Social Path + Sleep Path
+    steps:
+      - action: utter_first-time-user-intent
+      - intent: welcome-greet
+      - action: utter_welcome-greet
+      - action: utter_disclaimer
+      - intent: affirm
+      - action: utter_age
+      - intent: age-user
+        entities:
+          - age: '32'
+      - action: utter_gender
+      - action: utter_gender-intent
+      - intent: woman-path-intent-0
+      - action: utter_woman-path-intent-1
+      - action: utter_pregnant
+      - action: utter_pregnant-intent
+      - intent: deny
+        entities:
+          - deny: 'No'
+      - action: utter_bmi-intro
+      - action: utter_weight-question
+      - intent: bmi-weight-user
+        entities:
+          - weight: '60'
+      - action: utter_height-question
+      - intent: bmi-height-user
+        entities:
+          - height: '165'
+      - action: utter_background-path-intent-0
+      - intent: background-path-intent-1
+        entities:
+          - racial-id: middle-eastern
+      - action: utter_heredity
+      - action: utter_heredity-affirm-deny
+      - intent: smoking-path-intent-0
+      - action: utter_smoking-path-intent-0
+      - action: utter_smoking-affirm-deny
+      - intent: not-smoking
+      - action: utter_not-smoking
+      - action: utter_pe-start
+      - action: utter_pe-options
+      - intent: pe-inform
+      - action: utter_pe-inform
+      - action: utter_fruits/vegetables
+      - action: utter_count-fruits/vegetables
+      - intent: diet-inform-1
+      - action: utter_diet-inform-1
+      - action: utter_saturated-animal-fat
+      - action: utter_count-saturated-animal-fat
+      - intent: coffee
+      - action: utter_coffee
+      - action: utter_count-coffee
+      - intent: coffee-inform
+      - action: utter_coffee-inform
+      - action: utter_water
+      - action: utter_water-count
+      - intent: water-hardness
+      - action: utter_water-hardness
+      - action: utter_location-physical
+      - action: utter_location-list
+      - intent: location-inform
+      - action: utter_location-inform
+      - action: utter_calculated-risk
+      - action: utter_potential-reduction-of-risk
+      - action: utter_solutions-to-reduce-risks
+      - intent: thank
+        entities:
+          - affirm: 'Yes'
+          - thank: Ok thank you!
+      - action: utter_welcome-after-thankyou
+      - action: utter_continue-or-later
+      - action: utter_continue-assessment--intent
+      - intent: continue-assessment-path-intent-0
+        entities:
+          - affirm: 'Yes'
+      - action: utter_going-out
+      - action: utter_yes-no-social-going-out
+      - intent: people-seen-question
+      - action: utter_people-seen-question
+      - action: utter_count-people-seen
+      - intent: social-inform
+      - action: utter_social-inform
+      - action: utter_sleep-hours-question
+      - intent: count-sleep-hours
+        entities:
+          - hours-sleep: '6'
+      - action: utter_sleep-inform
+  - story: Untitled Path + Welcome Path + Untitled Path + Man Path + BMI Path + Background Path + Smoking Path + Smoking  + Physical activity Path + Diet Path + Risk Prediction Path + Untitled Path + Continue assessment Path + Social Path + Sleep Path
+    steps:
+      - action: utter_first-time-user-intent
+      - intent: welcome-greet
+      - action: utter_welcome-greet
+      - action: utter_disclaimer
+      - intent: affirm
+      - action: utter_age
+      - intent: age-user
+        entities:
+          - age: '32'
+      - action: utter_gender
+      - action: utter_gender-intent
+      - intent: man-path-intent-0
+      - action: utter_bmi-intro
+      - action: utter_weight-question
+      - intent: bmi-weight-user
+        entities:
+          - weight: '60'
+      - action: utter_height-question
+      - intent: bmi-height-user
+        entities:
+          - height: '165'
+      - action: utter_background-path-intent-0
+      - intent: background-path-intent-1
+        entities:
+          - racial-id: middle-eastern
+      - action: utter_heredity
+      - action: utter_heredity-affirm-deny
+      - intent: smoking-path-intent-0
+      - action: utter_smoking-path-intent-0
+      - action: utter_smoking-affirm-deny
+      - intent: smoking-initial
+      - action: utter_smoking-initial
+      - action: utter_yes-smoking
+      - intent: smoking-inform
+      - action: utter_smoking-inform
+      - action: utter_pe-start
+      - action: utter_pe-options
+      - intent: pe-inform
+      - action: utter_pe-inform
+      - action: utter_fruits/vegetables
+      - action: utter_count-fruits/vegetables
+      - intent: diet-inform-1
+      - action: utter_diet-inform-1
+      - action: utter_saturated-animal-fat
+      - action: utter_count-saturated-animal-fat
+      - intent: coffee
+      - action: utter_coffee
+      - action: utter_count-coffee
+      - intent: coffee-inform
+      - action: utter_coffee-inform
+      - action: utter_water
+      - action: utter_water-count
+      - intent: water-hardness
+      - action: utter_water-hardness
+      - action: utter_location-physical
+      - action: utter_location-list
+      - intent: location-inform
+      - action: utter_location-inform
+      - action: utter_calculated-risk
+      - action: utter_potential-reduction-of-risk
+      - action: utter_solutions-to-reduce-risks
+      - intent: thank
+        entities:
+          - affirm: 'Yes'
+          - thank: Ok thank you!
+      - action: utter_welcome-after-thankyou
+      - action: utter_continue-or-later
+      - action: utter_continue-assessment--intent
+      - intent: continue-assessment-path-intent-0
+        entities:
+          - affirm: 'Yes'
+      - action: utter_going-out
+      - action: utter_yes-no-social-going-out
+      - intent: people-seen-question
+      - action: utter_people-seen-question
+      - action: utter_count-people-seen
+      - intent: social-inform
+      - action: utter_social-inform
+      - action: utter_sleep-hours-question
+      - intent: count-sleep-hours
+        entities:
+          - hours-sleep: '6'
+      - action: utter_sleep-inform
+  - story: Untitled Path + Welcome Path + Untitled Path + Man Path + BMI Path + Background Path + Smoking Path + Smoking  + Not Smoking + Physical activity Path + Diet Path + Risk Prediction Path + Untitled Path + Continue assessment Path + Social Path + Sleep Path
+    steps:
+      - action: utter_first-time-user-intent
+      - intent: welcome-greet
+      - action: utter_welcome-greet
+      - action: utter_disclaimer
+      - intent: affirm
+      - action: utter_age
+      - intent: age-user
+        entities:
+          - age: '32'
+      - action: utter_gender
+      - action: utter_gender-intent
+      - intent: man-path-intent-0
+      - action: utter_bmi-intro
+      - action: utter_weight-question
+      - intent: bmi-weight-user
+        entities:
+          - weight: '60'
+      - action: utter_height-question
+      - intent: bmi-height-user
+        entities:
+          - height: '165'
+      - action: utter_background-path-intent-0
+      - intent: background-path-intent-1
+        entities:
+          - racial-id: middle-eastern
+      - action: utter_heredity
+      - action: utter_heredity-affirm-deny
+      - intent: smoking-path-intent-0
+      - action: utter_smoking-path-intent-0
+      - action: utter_smoking-affirm-deny
+      - intent: smoking-initial
+      - action: utter_smoking-initial
+      - action: utter_yes-smoking
+      - intent: not-smoking
+      - action: utter_not-smoking
+      - action: utter_pe-start
+      - action: utter_pe-options
+      - intent: pe-inform
+      - action: utter_pe-inform
+      - action: utter_fruits/vegetables
+      - action: utter_count-fruits/vegetables
+      - intent: diet-inform-1
+      - action: utter_diet-inform-1
+      - action: utter_saturated-animal-fat
+      - action: utter_count-saturated-animal-fat
+      - intent: coffee
+      - action: utter_coffee
+      - action: utter_count-coffee
+      - intent: coffee-inform
+      - action: utter_coffee-inform
+      - action: utter_water
+      - action: utter_water-count
+      - intent: water-hardness
+      - action: utter_water-hardness
+      - action: utter_location-physical
+      - action: utter_location-list
+      - intent: location-inform
+      - action: utter_location-inform
+      - action: utter_calculated-risk
+      - action: utter_potential-reduction-of-risk
+      - action: utter_solutions-to-reduce-risks
+      - intent: thank
+        entities:
+          - affirm: 'Yes'
+          - thank: Ok thank you!
+      - action: utter_welcome-after-thankyou
+      - action: utter_continue-or-later
+      - action: utter_continue-assessment--intent
+      - intent: continue-assessment-path-intent-0
+        entities:
+          - affirm: 'Yes'
+      - action: utter_going-out
+      - action: utter_yes-no-social-going-out
+      - intent: people-seen-question
+      - action: utter_people-seen-question
+      - action: utter_count-people-seen
+      - intent: social-inform
+      - action: utter_social-inform
+      - action: utter_sleep-hours-question
+      - intent: count-sleep-hours
+        entities:
+          - hours-sleep: '6'
+      - action: utter_sleep-inform
+  - story: Untitled Path + Welcome Path + Untitled Path + Man Path + BMI Path + Background Path + Smoking Path + Not Smoking + Physical activity Path + Diet Path + Risk Prediction Path + Untitled Path + Continue assessment Path + Social Path + Sleep Path
+    steps:
+      - action: utter_first-time-user-intent
+      - intent: welcome-greet
+      - action: utter_welcome-greet
+      - action: utter_disclaimer
+      - intent: affirm
+      - action: utter_age
+      - intent: age-user
+        entities:
+          - age: '32'
+      - action: utter_gender
+      - action: utter_gender-intent
+      - intent: man-path-intent-0
+      - action: utter_bmi-intro
+      - action: utter_weight-question
+      - intent: bmi-weight-user
+        entities:
+          - weight: '60'
+      - action: utter_height-question
+      - intent: bmi-height-user
+        entities:
+          - height: '165'
+      - action: utter_background-path-intent-0
+      - intent: background-path-intent-1
+        entities:
+          - racial-id: middle-eastern
+      - action: utter_heredity
+      - action: utter_heredity-affirm-deny
+      - intent: smoking-path-intent-0
+      - action: utter_smoking-path-intent-0
+      - action: utter_smoking-affirm-deny
+      - intent: not-smoking
+      - action: utter_not-smoking
+      - action: utter_pe-start
+      - action: utter_pe-options
+      - intent: pe-inform
+      - action: utter_pe-inform
+      - action: utter_fruits/vegetables
+      - action: utter_count-fruits/vegetables
+      - intent: diet-inform-1
+      - action: utter_diet-inform-1
+      - action: utter_saturated-animal-fat
+      - action: utter_count-saturated-animal-fat
+      - intent: coffee
+      - action: utter_coffee
+      - action: utter_count-coffee
+      - intent: coffee-inform
+      - action: utter_coffee-inform
+      - action: utter_water
+      - action: utter_water-count
+      - intent: water-hardness
+      - action: utter_water-hardness
+      - action: utter_location-physical
+      - action: utter_location-list
+      - intent: location-inform
+      - action: utter_location-inform
+      - action: utter_calculated-risk
+      - action: utter_potential-reduction-of-risk
+      - action: utter_solutions-to-reduce-risks
+      - intent: thank
+        entities:
+          - affirm: 'Yes'
+          - thank: Ok thank you!
+      - action: utter_welcome-after-thankyou
+      - action: utter_continue-or-later
+      - action: utter_continue-assessment--intent
+      - intent: continue-assessment-path-intent-0
+        entities:
+          - affirm: 'Yes'
+      - action: utter_going-out
+      - action: utter_yes-no-social-going-out
+      - intent: people-seen-question
+      - action: utter_people-seen-question
+      - action: utter_count-people-seen
+      - intent: social-inform
+      - action: utter_social-inform
+      - action: utter_sleep-hours-question
+      - intent: count-sleep-hours
+        entities:
+          - hours-sleep: '6'
+      - action: utter_sleep-inform
+  - story: Untitled Path + Welcome back Path + Smoking  + Physical activity Path + Diet Path + Risk Prediction Path + Untitled Path + Continue assessment Path + Social Path + Sleep Path
+    steps:
+      - action: utter_first-time-user-intent
+      - intent: untitled-path-intent-32
+      - action: utter_untitled-path-intent-32
+      - action: utter_smoking-initial
+      - action: utter_yes-smoking
+      - intent: smoking-inform
+      - action: utter_smoking-inform
+      - action: utter_pe-start
+      - action: utter_pe-options
+      - intent: pe-inform
+      - action: utter_pe-inform
+      - action: utter_fruits/vegetables
+      - action: utter_count-fruits/vegetables
+      - intent: diet-inform-1
+      - action: utter_diet-inform-1
+      - action: utter_saturated-animal-fat
+      - action: utter_count-saturated-animal-fat
+      - intent: coffee
+      - action: utter_coffee
+      - action: utter_count-coffee
+      - intent: coffee-inform
+      - action: utter_coffee-inform
+      - action: utter_water
+      - action: utter_water-count
+      - intent: water-hardness
+      - action: utter_water-hardness
+      - action: utter_location-physical
+      - action: utter_location-list
+      - intent: location-inform
+      - action: utter_location-inform
+      - action: utter_calculated-risk
+      - action: utter_potential-reduction-of-risk
+      - action: utter_solutions-to-reduce-risks
+      - intent: thank
+        entities:
+          - affirm: 'Yes'
+          - thank: Ok thank you!
+      - action: utter_welcome-after-thankyou
+      - action: utter_continue-or-later
+      - action: utter_continue-assessment--intent
+      - intent: continue-assessment-path-intent-0
+        entities:
+          - affirm: 'Yes'
+      - action: utter_going-out
+      - action: utter_yes-no-social-going-out
+      - intent: people-seen-question
+      - action: utter_people-seen-question
+      - action: utter_count-people-seen
+      - intent: social-inform
+      - action: utter_social-inform
+      - action: utter_sleep-hours-question
+      - intent: count-sleep-hours
+        entities:
+          - hours-sleep: '6'
+      - action: utter_sleep-inform
+  - story: Untitled Path + Welcome back Path + Smoking  + Not Smoking + Physical activity Path + Diet Path + Risk Prediction Path + Untitled Path + Continue assessment Path + Social Path + Sleep Path
+    steps:
+      - action: utter_first-time-user-intent
+      - intent: untitled-path-intent-32
+      - action: utter_untitled-path-intent-32
+      - action: utter_smoking-initial
+      - action: utter_yes-smoking
+      - intent: not-smoking
+      - action: utter_not-smoking
+      - action: utter_pe-start
+      - action: utter_pe-options
+      - intent: pe-inform
+      - action: utter_pe-inform
+      - action: utter_fruits/vegetables
+      - action: utter_count-fruits/vegetables
+      - intent: diet-inform-1
+      - action: utter_diet-inform-1
+      - action: utter_saturated-animal-fat
+      - action: utter_count-saturated-animal-fat
+      - intent: coffee
+      - action: utter_coffee
+      - action: utter_count-coffee
+      - intent: coffee-inform
+      - action: utter_coffee-inform
+      - action: utter_water
+      - action: utter_water-count
+      - intent: water-hardness
+      - action: utter_water-hardness
+      - action: utter_location-physical
+      - action: utter_location-list
+      - intent: location-inform
+      - action: utter_location-inform
+      - action: utter_calculated-risk
+      - action: utter_potential-reduction-of-risk
+      - action: utter_solutions-to-reduce-risks
+      - intent: thank
+        entities:
+          - affirm: 'Yes'
+          - thank: Ok thank you!
+      - action: utter_welcome-after-thankyou
+      - action: utter_continue-or-later
+      - action: utter_continue-assessment--intent
+      - intent: continue-assessment-path-intent-0
+        entities:
+          - affirm: 'Yes'
+      - action: utter_going-out
+      - action: utter_yes-no-social-going-out
+      - intent: people-seen-question
+      - action: utter_people-seen-question
+      - action: utter_count-people-seen
+      - intent: social-inform
+      - action: utter_social-inform
+      - action: utter_sleep-hours-question
+      - intent: count-sleep-hours
+        entities:
+          - hours-sleep: '6'
+      - action: utter_sleep-inform
